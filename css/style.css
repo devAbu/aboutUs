@@ -1,0 +1,39 @@
+.s1 {
+    /* HOME - juka ovdje stavi sliku koja ce bit u pozadini */
+    background: url('../images/one.jpg');
+    background-size: cover;
+}
+
+.s2 {
+    /* SKILLS - muha ovdje stavi pozadinu  */
+    background: url('../images/two.jpg');
+    background-size: cover;
+}
+
+.s3 {
+    /* TEAM - kiseli ovdje stavi pozadinu  */
+    background: url('../images/three.jpg');
+    background-size: cover;
+}
+
+.s4 {
+    /* PROJECTS - moj dio */
+    background: url('../images/three.jpg');
+    background-size: cover;
+}
+
+.s5 {
+    /* FOOTER - juka   */
+    background: url('../images/three.jpg');
+    background-size: cover;
+}
+
+span {
+    background: white !important
+}
+
+p {
+    color: white;
+    text-align: center;
+    font-size: 20px;
+}
