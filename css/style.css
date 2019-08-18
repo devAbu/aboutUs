@@ -1,7 +1,11 @@
 .s1 {
     /* HOME - juka ovdje stavi sliku koja ce bit u pozadini */
-    background: url('../images/one.jpg');
-    background-size: cover;
+    /* background: url('../images/one.jpg');
+    background-size: cover; */
+}
+
+.s1 canvas {
+    margin-top: -20%
 }
 
 .s2 {
@@ -36,4 +40,18 @@ p {
     color: white;
     text-align: center;
     font-size: 20px;
+}
+
+.typed-cursor {
+    color: red;
+}
+
+span#typed {
+    color: gold;
+    font-size: 20px;
+}
+
+#typedjs {
+    display: table;
+    margin: 0 auto;
 }
