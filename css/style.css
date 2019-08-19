@@ -1,9 +1,6 @@
 .s1 {
 
     /* HOME - juka ovdje stavi sliku koja ce bit u pozadini */
-    /* background: url('../images/one.jpg');
-    background-size: cover; */
-
     background: url("../images/prva.jpg") !important;
     background-repeat: no-repeat !important;
     background-position: center !important;
