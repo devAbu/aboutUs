@@ -13,10 +13,6 @@
     background-size: cover; */
 }
 
-.s1 canvas {
-    margin-top: -10%
-}
-
 .s2 {
     /* SKILLS - muha ovdje stavi pozadinu  */
     background: url('../images/two.jpg');
@@ -42,6 +38,10 @@
 }
 
 span {
+    background: white !important
+}
+
+span#typed {
     background: none !important
 }
 
@@ -52,7 +52,8 @@ p {
 }
 
 .typed-cursor {
-    color: red;
+    color: gold;
+    background: none !important
 }
 
 span#typed {
