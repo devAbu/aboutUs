@@ -1,13 +1,10 @@
-body{
-     
-}
 
 .s1 {
-<<<<<<< Updated upstream
+
     /* HOME - juka ovdje stavi sliku koja ce bit u pozadini */
     background: url('../images/one.jpg');
     background-size: cover;
-=======
+
     background: url(../images/prva.jpg) !important;
     background-repeat: no-repeat !important;
     background-position: center !important;
@@ -16,8 +13,6 @@ body{
 
 .s1 canvas {
     margin-top: -10% ;
-    
->>>>>>> Stashed changes
 }
 
 .s2 {
@@ -52,8 +47,7 @@ p {
     color: white;
     text-align: center;
     font-size: 20px;
-<<<<<<< Updated upstream
-=======
+
 }
 
 .typed-cursor {
@@ -152,5 +146,4 @@ span#typed {
         -webkit-transform: translateY(-15px);
         transform: translateY(-15px);
     }
->>>>>>> Stashed changes
-}
+ }
