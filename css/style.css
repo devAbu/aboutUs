@@ -1,5 +1,6 @@
 
 .s1 {
+<<<<<<< HEAD
 
     /* HOME - juka ovdje stavi sliku koja ce bit u pozadini */
     background: url('../images/one.jpg');
@@ -19,6 +20,11 @@
 
 .s1 canvas {
     margin-top: -10%
+=======
+    /* HOME - juka ovdje stavi sliku koja ce bit u pozadini */
+    background: url('../images/one.jpg');
+    background-size: cover;
+>>>>>>> parent of 63a3374... evo msm da je to malo usrano
 }
 
 .s2 {
@@ -46,13 +52,14 @@
 }
 
 span {
-    background: none !important
+    background: white !important
 }
 
 p {
     color: white;
     text-align: center;
     font-size: 20px;
+<<<<<<< HEAD
 }
 
 .typed-cursor {
@@ -153,3 +160,9 @@ span#typed {
         -webkit-transform: translateY(-15px);
         transform: translateY(-15px);
     }
+<<<<<<< Updated upstream
+=======
+=======
+>>>>>>> parent of 63a3374... evo msm da je to malo usrano
+}
+>>>>>>> Stashed changes
