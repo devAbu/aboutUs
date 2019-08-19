@@ -14,6 +14,11 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
+    <script src="js/pixi.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
+
+    <script src="https://kit.fontawesome.com/4dd2b4255f.js"></script>
+
 </head>
 
 <body>
@@ -28,6 +33,9 @@
 
             <div id="arrowDown" class="mt-5"></div>
 
+            <div id="typedjs"></div>
+
+            <div id="arrowDown" class="mt-5"></div>
         </div>
         <div class="section s2">
             <div id="skills"></div>
@@ -81,6 +89,8 @@
             $(document).ready(function () {
                 console.log('juhu')
                 $('#home').load('./views/home.html')
+                $('#typedjs').load('./views/typedjs.html')
+                $('#arrowDown').load('./views/arrowDown.html')
                 $('#skills').load('./views/skills.html')
                 $('#teams').load('./views/teams.html')
                 $('#project').load('./views/project.html')

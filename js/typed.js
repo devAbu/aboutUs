@@ -7,4 +7,5 @@ var typed = new Typed('#typed', {
     fadeOutDelay: 500, */
     typeSpeed: 30,
     backSpeed: 30,
+    backSpeed: 30
 });
