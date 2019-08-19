@@ -1,11 +1,18 @@
+body{
+     
+}
 
 .s1 {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+<<<<<<< Updated upstream
+>>>>>>> parent of fbb99f7... popravka
     /* HOME - juka ovdje stavi sliku koja ce bit u pozadini */
     background: url('../images/one.jpg');
     background-size: cover;
-
+=======
     background: url(../images/prva.jpg) !important;
     background-repeat: no-repeat !important;
     background-position: center !important;
@@ -14,6 +21,7 @@
 
 .s1 canvas {
     margin-top: -10% ;
+<<<<<<< HEAD
     /* background: url('../images/one.jpg');
     background-size: cover; */
 }
@@ -25,6 +33,10 @@
     background: url('../images/one.jpg');
     background-size: cover;
 >>>>>>> parent of 63a3374... evo msm da je to malo usrano
+=======
+    
+>>>>>>> Stashed changes
+>>>>>>> parent of fbb99f7... popravka
 }
 
 .s2 {
@@ -60,6 +72,11 @@ p {
     text-align: center;
     font-size: 20px;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< Updated upstream
+=======
+>>>>>>> parent of fbb99f7... popravka
 }
 
 .typed-cursor {
@@ -160,9 +177,14 @@ span#typed {
         -webkit-transform: translateY(-15px);
         transform: translateY(-15px);
     }
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 =======
 =======
 >>>>>>> parent of 63a3374... evo msm da je to malo usrano
 }
 >>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
+}
+>>>>>>> parent of fbb99f7... popravka
