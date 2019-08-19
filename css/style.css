@@ -1,18 +1,17 @@
-
 .s1 {
 
     /* HOME - juka ovdje stavi sliku koja ce bit u pozadini */
-    background: url('../images/one.jpg');
-    background-size: cover;
+    /* background: url('../images/one.jpg');
+    background-size: cover; */
 
-    background: url(../images/prva.jpg) !important;
+    background: url("../images/prva.jpg") !important;
     background-repeat: no-repeat !important;
     background-position: center !important;
     background-size: cover !important
 }
 
 .s1 canvas {
-    margin-top: -10% ;
+    margin-top: -10%;
     /* background: url('../images/one.jpg');
     background-size: cover; */
 }
@@ -61,8 +60,6 @@ p {
 
 span#typed {
     color: white;
-
-    color: gold;
     font-size: 20px;
 }
 
@@ -153,3 +150,4 @@ span#typed {
         -webkit-transform: translateY(-15px);
         transform: translateY(-15px);
     }
+}
