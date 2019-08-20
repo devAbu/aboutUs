@@ -8,9 +8,10 @@
 }
 
 .s1 canvas {
-    margin-top: -10%;
-    /* background: url('../images/one.jpg');
-    background-size: cover; */
+    height: 80% !important;
+    width: 80% !important;
+    display: table;
+    margin: 0 auto;
 }
 
 .s2 {
@@ -58,7 +59,7 @@ p {
 
 span#typed {
     color: white;
-    font-size: 20px;
+    font-size: 25px;
 }
 
 #typedjs {
