@@ -1,6 +1,4 @@
 .s1 {
-
-    /* HOME - juka ovdje stavi sliku koja ce bit u pozadini */
     background: url("../images/prva.jpg") !important;
     background-repeat: no-repeat !important;
     background-position: center !important;
@@ -15,25 +13,19 @@
 }
 
 .s2 {
-    /* SKILLS - muha ovdje stavi pozadinu  */
-    background: url('../images/two.jpg');
-    background-size: cover;
+    background-color: black !important
 }
 
-.s3 p {
-    color: black !important
+.s3 {
+    background-color: black !important
 }
 
 .s4 {
-    /* PROJECTS - moj dio */
-    background: url('../images/three.jpg');
-    background-size: cover;
+    background-color: black !important
 }
 
 .s5 {
-    /* FOOTER - juka   */
-    background: url('../images/three.jpg');
-    background-size: cover;
+    background-color: black !important
 }
 
 span {
@@ -52,7 +44,8 @@ p {
 
 .typed-cursor {
     color: gold;
-    background: none !important
+    background: none !important;
+    font-size: x-large
 }
 
 span#typed {

@@ -1,10 +1,9 @@
 var typed = new Typed('#typed', {
-    strings: ["This is a JavaScript library", "This is an ES6 module"],
+    strings: ["This is a JavaScript library", "This is an ES6 module <i class='fas fa-arrow-down'></i>"],
     smartBackspace: true,
     loop: true,
-    /* fadeOut: true,
-    fadeOutClass: 'typed-fade-out',
-    fadeOutDelay: 500, */
     typeSpeed: 30,
     backSpeed: 30,
+    /* random recenice -- shuffle: true, 
+     */
 });
