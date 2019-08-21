@@ -20,10 +20,8 @@
     background-size: cover;
 }
 
-.s3 {
-    /* TEAM - kiseli ovdje stavi pozadinu  */
-    background: url('../images/three.jpg');
-    background-size: cover;
+.s3 p {
+    color: black !important
 }
 
 .s4 {
