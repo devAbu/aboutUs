@@ -7,12 +7,51 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>ABOC</title>
 
+    <meta name="author" content="ABOC">
+    <meta name="description" content="TEKST O NAMA">
+    <meta name="keyword" content="aboc, web, development, IT">
+    <meta name="Copyright" content="ABOC">
+    <meta name="Designer" content="ABOC">
+    <meta name="Publisher" content="ABOC">
+
+    <link rel="shortcut icon" href="images/logoIcon.ico" type="image/x-icon">
+
     <link rel="stylesheet" href="css/style.css">
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" rel="preconnect" crossorigin="anonymous">
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.7/vendors/scrolloverflow.min.js"
+        integrity="sha256-R7CttZ4L0/szai0hbFUlPDiRaEJmqYuvLhyAOr19vQg=" rel="preconnect" crossorigin="anonymous">
+    </script>
+
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery-slimScroll/1.3.8/jquery.slimscroll.min.js"
+        integrity="sha256-qE/6vdSYzQu9lgosKxhFplETvWvqAAlmAuR+yPh/0SI=" crossorigin="anonymous"></script> -->
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.7/fullpage.min.css"
-        integrity="sha256-3IkGqGYOvq1Ype2MXFwVJFeBtBACgiveho3SacOEEP8=" crossorigin="anonymous" />
+        integrity="sha256-3IkGqGYOvq1Ype2MXFwVJFeBtBACgiveho3SacOEEP8=" rel="preconnect" crossorigin="anonymous" />
+
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <script src="js/pixi.min.js" rel="preconnect"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9" rel="preconnect"></script>
+
+    <script src="https://kit.fontawesome.com/4dd2b4255f.js" rel="preconnect"></script>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.7/fullpage.extensions.min.js"
+        integrity="sha256-l/fwzXp9IwBn0fFrBx+IU4JGuSP5lZsfE5i8uMAWD90=" crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
 
 </head>
 
@@ -21,6 +60,10 @@
     <div id="fullPage">
         <div class="section s1">
             <div id="home"></div>
+
+            <div id="typedjs"></div>
+
+            <div id="arrowDown" class="mt-5"></div>
         </div>
         <div class="section s2">
             <div id="skills"></div>
@@ -36,18 +79,17 @@
         </div>
     </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.7/fullpage.extensions.min.js"
-        integrity="sha256-l/fwzXp9IwBn0fFrBx+IU4JGuSP5lZsfE5i8uMAWD90=" crossorigin="anonymous"></script>
+    <script src="js/include.js"></script>
 
     <script>
         new fullpage('#fullPage', {
-            licenseKey: null,
             autoScrolling: true,
             navigation: true,
             anchors: ['homeSection', 'skillsSection', 'teamsSection', 'projectsSection', 'contactSection'],
             navigationTooltips: ['Home', 'Skills', 'Team', 'Projects', 'Contact'],
             showActiveTooltip: true,
             scrollingSpeed: 850,
+
  
             /* css3: true,
             fitToSection: true,
@@ -59,7 +101,6 @@
             continuousVertical: true,
             fadingEffect: true,
 
-            fadingEffect: true,
             dragAndMove: true,
             lazyLoading: true,
             normalScrollElements: '.s2',
@@ -68,32 +109,9 @@
             scrollOverflowOptions: null, */
             scrollBar: true,
             normalScrollElementTouchThreshold: 10,
-            continuousVertical: true,
-
         })
     </script>
 
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
-        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
-    </script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
-    </script>
-
-    <script>
-        $(window).on("load", function () {
-            $(document).ready(function () {
-                console.log('juhu')
-                $('#home').load('./views/home.html')
-                $('#skills').load('./views/skills.html')
-                $('#teams').load('./views/teams.html')
-                $('#project').load('./views/project.html')
-                $('#footer').load('./views/footer.html')
-            })
-        })
-    </script>
 </body>
 
 </html>

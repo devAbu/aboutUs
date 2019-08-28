@@ -1,35 +1,39 @@
 .s1 {
-    /* HOME - juka ovdje stavi sliku koja ce bit u pozadini */
-    background: url('../images/one.jpg');
-    background-size: cover;
+    background: url("../images/prva.jpg") !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    background-size: cover !important
+}
+
+.s1 canvas {
+    height: 80% !important;
+    width: 80% !important;
+    display: table;
+    margin: 0 auto;
 }
 
 .s2 {
-    /* SKILLS - muha ovdje stavi pozadinu  */
-    background: url('../images/two.jpg');
-    background-size: cover;
+    background-color: black !important
 }
 
 .s3 {
-    /* TEAM - kiseli ovdje stavi pozadinu  */
-    background: url('../images/three.jpg');
-    background-size: cover;
+    background-color: black !important
 }
 
 .s4 {
-    /* PROJECTS - moj dio */
-    background: url('../images/three.jpg');
-    background-size: cover;
+    background-color: black !important
 }
 
 .s5 {
-    /* FOOTER - juka   */
-    background: url('../images/three.jpg');
-    background-size: cover;
+    background-color: black !important
 }
 
 span {
     background: white !important
+}
+
+span#typed {
+    background: none !important
 }
 
 p {
@@ -137,6 +141,7 @@ span#typed {
         transform: translateY(-15px);
     }
 }
+
 .topL{
     float: left !important;
 }
