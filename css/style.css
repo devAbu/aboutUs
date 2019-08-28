@@ -142,16 +142,22 @@ span#typed {
     }
 }
 
-.topL{
+.topL {
     float: left !important;
 }
-.topR{
+
+.topR {
     float: right !important;
 }
 
-.centerImg{
-   margin-left: 42%;
+.centerImg {
+    margin-left: 42%;
 }
-.bottomR{
+
+.bottomR {
     float: right !important;
+}
+
+.row {
+    margin-right: 0% !important;
 }
