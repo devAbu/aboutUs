@@ -144,18 +144,22 @@ span#typed {
 
 .topL {
     float: left !important;
+    opacity: 0.5;
 }
 
 .topR {
     float: right !important;
-}
-
-.centerImg {
-    margin-left: 42%;
+    opacity: 0.5;
 }
 
 .bottomR {
     float: right !important;
+    opacity: 0.5;
+}
+
+.bottomL {
+    float: left !important;
+    opacity: 0.5;
 }
 
 .row {
