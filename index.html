@@ -77,9 +77,9 @@
         <div class="section s4">
             <div id="project"></div>
         </div>
-        <div class="section s5">
+        <!-- <div class="section s5">
             <div id="footer"></div>
-        </div>
+        </div> -->
     </div>
 
 
@@ -89,8 +89,9 @@
         new fullpage('#fullPage', {
             autoScrolling: true,
             navigation: true,
-            anchors: ['homeSection', 'skillsSection', 'teamsSection', 'projectsSection', 'contactSection'],
-            navigationTooltips: ['Home', 'Skills', 'Team', 'Projects', 'Contact'],
+            anchors: ['homeSection', 'skillsSection', 'teamsSection',
+                'projectsSection' /* , 'contactSection' */ ],
+            navigationTooltips: ['Home', 'Skills', 'Team', 'Projects' /* , 'Contact' */ ],
             showActiveTooltip: true,
             scrollingSpeed: 850,
             continuousVertical: true,
