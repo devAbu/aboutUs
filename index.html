@@ -17,6 +17,7 @@
     <link rel="shortcut icon" href="images/logoIcon.ico" type="image/x-icon">
 
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet/less" type="text/css" href="css/project.less" />
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" rel="preconnect" crossorigin="anonymous">
@@ -26,12 +27,8 @@
         integrity="sha256-R7CttZ4L0/szai0hbFUlPDiRaEJmqYuvLhyAOr19vQg=" rel="preconnect" crossorigin="anonymous">
     </script>
 
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery-slimScroll/1.3.8/jquery.slimscroll.min.js"
-        integrity="sha256-qE/6vdSYzQu9lgosKxhFplETvWvqAAlmAuR+yPh/0SI=" crossorigin="anonymous"></script> -->
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.7/fullpage.min.css"
         integrity="sha256-3IkGqGYOvq1Ype2MXFwVJFeBtBACgiveho3SacOEEP8=" rel="preconnect" crossorigin="anonymous" />
-
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -42,6 +39,8 @@
     <script src="https://kit.fontawesome.com/4dd2b4255f.js" rel="preconnect"></script>
 
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"
+        integrity="sha256-0rguYS0qgS6L4qVzANq4kjxPLtvnp5nn2nB5G1lWRv4=" crossorigin="anonymous"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.7/fullpage.extensions.min.js"
         integrity="sha256-l/fwzXp9IwBn0fFrBx+IU4JGuSP5lZsfE5i8uMAWD90=" crossorigin="anonymous"></script>
@@ -85,23 +84,26 @@
 
     <script src="js/include.js"></script>
 
+
     <script>
         new fullpage('#fullPage', {
             autoScrolling: true,
             navigation: true,
             anchors: ['homeSection', 'skillsSection', 'teamsSection',
-                'projectsSection' /* , 'contactSection' */ ],
+                'projectsSection' /* , 'contactSection' */
+            ],
             navigationTooltips: ['Home', 'Skills', 'Team', 'Projects' /* , 'Contact' */ ],
             showActiveTooltip: true,
             scrollingSpeed: 850,
-            continuousVertical: true,
+            /* continuousVertical: true, */
             normalScrollElements: '.s2',
             scrollBar: true,
             bigSectionsDestination: top,
         })
     </script>
 
-
+    <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.9.0/less.min.js"></script>
+    <!-- <script src="js/project.js"></script> -->
 
 </body>
 
