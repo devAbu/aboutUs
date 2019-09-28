@@ -28,9 +28,9 @@
     background-color: black !important
 }
 
-span {
+/* span {
     background: white !important
-}
+} */
 
 span#typed {
     background: none !important
@@ -164,4 +164,50 @@ span#typed {
 
 .row {
     margin-right: 0% !important;
+}
+
+#fp-nav ul li:nth-child(1) a label::before {
+    font-family: "Font Awesome 5 Brands";
+    content: "\f099"
+}
+
+#fp-nav ul li:nth-child(1) a label {
+    cursor: pointer;
+}
+
+#fp-nav ul li:nth-child(2) a label::before {
+    font-family: "Font Awesome\ 5 Free";
+    font-weight: 900;
+    content: "\f0c0";
+}
+
+#fp-nav ul li:nth-child(2) a label {
+    cursor: pointer;
+}
+
+#fp-nav ul li:nth-child(3) a label::before {
+    font-family: "Font Awesome\ 5 Free";
+    font-weight: 900;
+    content: "\f0c0";
+}
+
+#fp-nav ul li:nth-child(3) a label {
+    cursor: pointer;
+}
+
+#fp-nav ul li:nth-child(4) a label::before {
+    font-family: "Font Awesome 5 Brands";
+    content: "\f099"
+}
+
+#fp-nav ul li:nth-child(4) a label {
+    cursor: pointer;
+}
+
+#fp-nav ul li a {
+    margin-top: 10px;
+}
+
+#fp-nav ul li div.fp-tooltip {
+    margin-top: 15%
 }
