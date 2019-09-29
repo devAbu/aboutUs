@@ -167,8 +167,9 @@ span#typed {
 }
 
 #fp-nav ul li:nth-child(1) a label::before {
-    font-family: "Font Awesome 5 Brands";
-    content: "\f099"
+    font-family: "Font Awesome\ 5 Free";
+    font-weight: 900;
+    content: "\f015";
 }
 
 #fp-nav ul li:nth-child(1) a label {
@@ -178,7 +179,7 @@ span#typed {
 #fp-nav ul li:nth-child(2) a label::before {
     font-family: "Font Awesome\ 5 Free";
     font-weight: 900;
-    content: "\f0c0";
+    content: "\f085";
 }
 
 #fp-nav ul li:nth-child(2) a label {
@@ -196,8 +197,9 @@ span#typed {
 }
 
 #fp-nav ul li:nth-child(4) a label::before {
-    font-family: "Font Awesome 5 Brands";
-    content: "\f099"
+    font-family: "Font Awesome\ 5 Free";
+    font-weight: 900;
+    content: "\f542";
 }
 
 #fp-nav ul li:nth-child(4) a label {
@@ -205,9 +207,9 @@ span#typed {
 }
 
 #fp-nav ul li a {
-    margin-top: 10px;
+    margin-top: 20px;
 }
 
 #fp-nav ul li div.fp-tooltip {
-    margin-top: 15%
+    margin-top: 25%
 }
