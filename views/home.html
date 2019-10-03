@@ -1,10 +1,35 @@
 <!-- ALDIN DA VIDI IMAL BOLJE NESTO -->
-<!-- Loading square for squar.red network -->
-<div class="loading-wrapper">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/4.5.1/pixi.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"
-            integrity="sha256-lPE3wjN2a7ABWHbGz7+MKBJaykyzqCbU96BJWjio86U=" crossorigin="anonymous"></script>
-        <script src="./js/index.js" type="module"></script>
-</div>
 
+<!-- Loading screen -->
+<div class="loader" id="loader">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+</div>    
+<!-- Loading screen -->
+
+<!-- Hexa -->
+<div style="width:100%;" id="jsi-hex-container" class="hexa"></div>
+<script src="./js/main.js" style="width: 100%;"></script>
+<!-- Hexa -->
+
+<!-- Loading screen skripta -->
+<script>
+var myVar;
+
+function myFunction() {
+  myVar = setTimeout(showPage, 3000);
+}
+
+function showPage() {
+  document.getElementById("loader").style.display = "none";
+  document.getElementById("myDiv").style.display = "block";
+}
+</script>
+<!-- Loading screen skripta -->
+
+<!-- ABOC 3d -->
 <script src="js/pixi3DEffect.js"></script>
+<!-- ABOC 3d -->
+
