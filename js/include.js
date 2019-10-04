@@ -8,5 +8,6 @@ $(window).on("load", function () {
         $('#teams').load('./views/teams.html')
         $('#project').load('./views/project.html')
         $('#footer').load('./views/footer.html')
+        $('#hexa').load('./views/hexa.html')
     })
 })
