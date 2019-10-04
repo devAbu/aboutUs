@@ -1,4 +1,4 @@
-console.log("combicabombica");
+console.log("dadsadsa");
 var RENDERER = {
     RESIZE_INTERVAL: 30,
     RADIUS: 25,

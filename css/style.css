@@ -11,21 +11,17 @@
     display: table;
     margin: 0 auto;
 } */
-html,
-body {
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
+
+.s1 canvas {
+    height: 100% !important;
+    width: 100% !important;
+    display: table;
+    margin: 0 auto;
 }
 
-.container {
-    width: 100%;
-    height: 100%;
+body {
     margin: 0;
-    padding: 0;
-    background-color: #000000;
+    overflow: hidden;
 }
 
 /* canvas {
@@ -37,7 +33,13 @@ body {
     transition: all 3s ease-in;
 }
 
-
+.hexaContainer {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #000000;
+}
 
 .hidden {
     display: none;
