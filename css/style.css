@@ -13,10 +13,15 @@
 } */
 
 .s1 canvas {
-    height: 100% !important;
+    /*     height: 100% !important;
+ */
     width: 100% !important;
     display: table;
     margin: 0 auto;
+}
+
+#home {
+    height: 100% !important;
 }
 
 body {
