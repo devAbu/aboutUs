@@ -189,23 +189,48 @@ span#typed {
 }
 
 .topL {
-    float: left !important;
+    float: left;
     opacity: 0.5;
 }
 
 .topR {
-    float: right !important;
+    float: right;
     opacity: 0.5;
 }
 
 .bottomR {
-    float: right !important;
+    float: right;
     opacity: 0.5;
 }
 
 .bottomL {
-    float: left !important;
+    float: left;
     opacity: 0.5;
+}
+
+@media only screen and (max-width: 767px) {
+
+    .topL,
+    .topR,
+    .bottomR,
+    .bottomL {
+        float: none;
+        opacity: 1;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+        pointer-events: none;
+    }
+
+    .centerImg {
+        width: 150px;
+        height: 150px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        pointer-events: none;
+    }
 }
 
 .row {

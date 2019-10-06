@@ -8,7 +8,7 @@ new fullpage('#fullPage', {
     showActiveTooltip: true,
     scrollingSpeed: 850,
     /* continuousVertical: true, */
-    normalScrollElements: '.s2',
+    normalScrollElements: '.normalScroll',
     scrollBar: true,
     bigSectionsDestination: top,
     css3: true
