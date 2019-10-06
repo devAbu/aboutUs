@@ -1,3 +1,4 @@
+$('.loader').addClass('hidden')
 import {
     Black,
     White

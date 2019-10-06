@@ -42,7 +42,7 @@ body {
 } */
 
 .zoomCanvas {
-    transform: scale(20);
+    transform: scale(16);
     transition: all 3s ease-in;
 }
 
