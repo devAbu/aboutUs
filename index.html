@@ -35,8 +35,13 @@
 
     <!-- COMPUTER JS -->
     <script src="js/modernizr.js" type="text/javascript"></script>
-    <!--     <script src="js/webflow.js" type="text/javascript"></script>
- -->
+
+    <!-- LASER CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/splitting@0.11.3/splitting.css">
+    <link rel="stylesheet" href="css/laserCss.css">
+
+    <!-- LASER JS -->
+
 </head>
 
 <body>
@@ -121,7 +126,8 @@
                                     <div class="straight-line" data-ix="arrow-load"></div>
                                     <div class="straight-line-full" data-ix="loading-line-animation"></div>
                                     <div class="straight-line-full" data-ix="loading-line-animation-2"></div>
-                                    <div class="straight-line-full" data-ix="loading-line-animation-4-shortened"></div>
+                                    <div class="straight-line-full" data-ix="loading-line-animation-4-shortened">
+                                    </div>
                                     <div class="straight-line-full" data-ix="loading-line-animation-5"></div>
                                     <div class="shortened straight-line-full" data-ix="loading-line-animation-6shorted">
                                     </div>
@@ -158,8 +164,17 @@
                         <div class="_18 keyboard__button"></div>
                     </div>
                 </div>
-            </div>
 
+                <div class="title">
+                    <span class="text2 write" data-splitting>
+                        Welcome to ABOC page
+                    </span>
+                    <span aria-hidden="true" class="text2 laser" data-splitting>
+                        Welcome to ABOC page
+                    </span>
+                </div>
+
+            </div>
         </div>
         <div class="section s2 normalScroll">
             <div id="skills"></div>
@@ -196,6 +211,9 @@
     <script src="js/include.js"></script>
 
     <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.9.0/less.min.js"></script>
+
+    <script src="https://unpkg.com/splitting/dist/splitting.js"></script>
+    <!-- <script src="js/laser.js"></script> -->
 
 </body>
 
