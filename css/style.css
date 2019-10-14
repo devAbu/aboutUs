@@ -872,3 +872,7 @@ header h1 {
     height: 150px;
     width: 250px;
 }
+
+.clientFont {
+    font-size: 1.2rem;
+}
