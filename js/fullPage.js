@@ -2,9 +2,9 @@ new fullpage('#fullPage', {
     autoScrolling: true,
     navigation: true,
     anchors: ['homeSection', 'skillsSection', 'teamsSection',
-        'projectsSection' /* , 'contactSection' */
+        'projectsSection', 'contactSection'
     ],
-    navigationTooltips: ['Home', 'Skills', 'Team', 'Projects' /* , 'Contact' */ ],
+    navigationTooltips: ['Home', 'Skills', 'Team', 'Projects', 'Contact'],
     showActiveTooltip: true,
     scrollingSpeed: 850,
     /* continuousVertical: true, */
