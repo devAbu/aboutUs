@@ -460,6 +460,10 @@ header h1 {
     background: #f0ca45;
 }
 
+.cd-timeline-img.cd-time {
+    background: blue;
+}
+
 @media only screen and (min-width: 1170px) {
     .cd-timeline-img {
         width: 60px;
@@ -545,11 +549,14 @@ header h1 {
 
 .cd-timeline-content {
     position: relative;
-    margin-left: 60px;
+    width:400px !important;
+    text-align:center !important;
     background: #ffffff;
     border-radius: 0.25em;
     padding: 1em;
     box-shadow: 0 3px 0 #d7e4ed;
+    margin-right: 50px;
+    margin-left: 60px!important;
 }
 
 .cd-timeline-content::after {
@@ -852,6 +859,11 @@ header h1 {
     animation: rotate 1s linear infinite;
     fill: rgba(0, 0, 0, 0.2);
 }
+
+@media only screen and (max-width:978px) {
+    .cd-timeline-block h2 {
+      padding:0;
+      margin-left:10px !important;
 
 .card__image {
     height: 150px;
