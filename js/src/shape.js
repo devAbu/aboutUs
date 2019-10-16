@@ -29,7 +29,7 @@ class Base extends PIXI.Container {
     }
 
     intro(index) {
-        const delay = index * 0.1;
+        const delay = index * 0.09;
         this.progress = 0;
 
         TweenMax.from(this, 0.5, {

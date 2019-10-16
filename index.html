@@ -40,7 +40,6 @@
     <link rel="stylesheet" href="https://unpkg.com/splitting@0.11.3/splitting.css">
     <link rel="stylesheet" href="css/laserCss.css">
 
-    <!-- LASER JS -->
 
 </head>
 
@@ -182,10 +181,18 @@
         <div class="section s3">
             <div id="teams"></div>
         </div>
-        <div class="section s4">
+        <div class="section s4 normalScroll">
             <div id="project"></div>
         </div>
+        <div class="section s5">
+            <div id="contact"></div>
+        </div>
     </div>
+
+    <!--TODO: TREBA OBRISAT -->
+    <script>
+        $('#contact').load('./views/contact.html')
+    </script>
 
     <script src="js/loading.js"></script>
 
