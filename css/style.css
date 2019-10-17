@@ -46,7 +46,7 @@ body {
 }
 
 .s3 {
-    background-color: black !important
+    background: linear-gradient(to bottom, #0f0c29 0%, #302b63 70%);
 }
 
 /* .s4 {
@@ -184,6 +184,12 @@ span#typed {
 
 .bottomL {
     float: left;
+    opacity: 0.5;
+}
+
+.bottomC{
+    display: table;
+    margin: 0 auto;
     opacity: 0.5;
 }
 
