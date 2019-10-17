@@ -71,19 +71,32 @@ window.onload = function () {
         } else if (userMessage == "") {
             toastr.error("Please enter your message.")
         } else {
-            toastr.success("Thank you.")
-            this.disabled = true;
+            $.ajax({
+                url: "sendEmail.php?task=message&userEmail=" + userEmail + "&userName=" + userName + "&userSubject=" + userSubject + "&userMessage=" + userMessage,
+                success: function (data) {
+                    if (data.indexOf('sent') > -1) {
+                        toastr.success("Thank you.")
+                        this.disabled = true;
 
-            startAnimation();
-            setTimeout(function () {
-                reset();
-                email.classList.add("hide");
-                envelope.classList.add("done");
-            }, 7500);
-            setTimeout(function () {
-                envelope.classList.add("show");
-                finished.classList.add("show");
-            }, 7800);
+                        startAnimation();
+                        setTimeout(function () {
+                            reset();
+                            email.classList.add("hide");
+                            envelope.classList.add("done");
+                        }, 7500);
+                        setTimeout(function () {
+                            envelope.classList.add("show");
+                            finished.classList.add("show");
+                        }, 7800);
+                    } else {
+                        toastr.error("An error occurred. Please try later.")
+                    }
+                },
+                error: function (data, err) {
+                    toastr.error("There is an error. Please try again later.")
+                }
+            });
+
         }
     });
 
