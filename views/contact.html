@@ -26,42 +26,45 @@
             <span>New Message</span>
         </div>
 
-        <form action="" method="" onSubmit="return false;">
+        <form>
+            <!-- action="" method="" onSubmit="return false;" -->
             <div class="emailInfo">
 
                 <div class="infoLine">
                     <div class="infoInput">
                         <label>To :</label>
-                        <input type="text" disabled="disabled" class="active" value="info@aboc.com">
+                        <input type="text" disabled="disabled" id="ourEmail" name="ourEmail" class="active"
+                            value="info@aboc.com">
                     </div>
 
-                    <input type="submit" id="send" value="Send">
+                    <input type="button" id="send" value="Send">
                 </div>
 
                 <div class="infoLine">
                     <div class="infoInput">
                         <label>From :</label>
-                        <input type="email" id="fromEmail" placeholder="What's your email address?">
+                        <input type="email" id="fromEmail" name="fromEmail" placeholder="What's your email address?">
                     </div>
                 </div>
 
                 <div class="infoLine">
                     <div class="infoInput">
                         <label>Name :</label>
-                        <input type="text" id="fromName" placeholder="What's your name?">
+                        <input type="text" id="fromName" name="fromName" placeholder="What's your name?">
                     </div>
                 </div>
 
                 <div class="infoLine">
                     <div class="infoInput">
                         <label>Subject :</label>
-                        <input type="text" id="fromSubject" placeholder="What is it you want to talk about?">
+                        <input type="text" id="fromSubject" id="fromSubject"
+                            placeholder="What is it you want to talk about?">
                     </div>
                 </div>
 
             </div>
 
-            <textarea id="mainMessage" placeholder="Type your message here..."></textarea>
+            <textarea id="mainMessage" name="mainMessage" placeholder="Type your message here..."></textarea>
 
         </form>
 
