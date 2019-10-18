@@ -555,7 +555,7 @@ header h1 {
 
 .cd-timeline-content {
     position: relative;
-    width: 400px !important;
+    width: 400px;
     text-align: center !important;
     background: #ffffff;
     border-radius: 0.25em;
@@ -563,6 +563,16 @@ header h1 {
     box-shadow: 0 3px 0 #d7e4ed;
     margin-right: 50px;
     margin-left: 60px !important;
+}
+
+@media only screen and (max-width: 767px) {
+    .cd-timeline-content {
+        width: 200px;
+    }
+
+    .skillsHeading {
+        font-size: 25px !important
+    }
 }
 
 .cd-timeline-content::after {
