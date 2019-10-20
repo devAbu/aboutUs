@@ -4,8 +4,10 @@ var width = window.innerWidth ||
 
 if (width <= 767) {
     $('.s3').addClass('normalScroll')
+    $('.s5').addClass('normalScroll')
 } else {
     $('.s3').removeClass('normalScroll')
+    $('.s5').removeClass('normalScroll')
 }
 
 $(".welcome").addClass('hidden');
