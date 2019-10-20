@@ -3941,11 +3941,12 @@ body {
 
 .sendEmailContainer {
     width: 100%;
-    height: 100vh;
+    /* height: 100vh; */
     overflow: auto;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 2%
 }
 
 .emailBody {
@@ -4205,9 +4206,9 @@ body {
         left: -10%;
     }
 }
-.socialMedia h2{
+.socialMedia h4{
     display: inline-block;
     position: relative;
-    top: -44px;;
+    top: -44px;
     color: #3498db;
 }
