@@ -3941,7 +3941,7 @@ body {
 
 .sendEmailContainer {
     width: 100%;
-    /* height: 100vh; */
+    height: 80vh;
     overflow: auto;
     display: flex;
     justify-content: center;
@@ -4170,6 +4170,8 @@ body {
     overflow: hidden;
     position: relative;
 }
+
+
 .socialMediaBtn i{
     line-height: 90px;
     font-size: 26px;
@@ -4187,7 +4189,7 @@ body {
 }
 @media screen and (min-width: 690px) {
     .socialMedia h4 {
-        font-size: 13px !important;
+        font-size: 20px !important;
     }
 }
 .socialMediaBtn:hover i{
@@ -4235,5 +4237,22 @@ body {
         perspective: 1000;
         position: relative;
         z-index: 1; 
+       }
+
+       .socialMediaBtn{
+           height: 45px;
+           width: 45px
+       }
+
+       .socialMediaBtn i{
+           line-height: 50px
+       }
+
+       .socialMedia h4{
+           top: -24px
+       }
+
+       .s5{
+           z-index: 999 !important
        }
 }
