@@ -263,9 +263,12 @@ $(document).ready(function () {
         finishIntro();
     }
 
-    // preskoci intro: klik na dugme, Esc ili Enter
-    $(document).on('click', '.skip-intro', finishIntro);
+    // preskoci intro: Esc ili Enter (klik na dugme je u js/loading.js, dostupan i prije ucitavanja ovog modula)
+    window.finishIntro = finishIntro;
     $(document).on('keydown', function (e) {
         if (e.key === 'Escape' || e.key === 'Enter') finishIntro();
     });
+
+    // korisnik je kliknuo Skip prije nego sto se intro ucitao
+    if (window.skipIntroRequested) finishIntro();
 });
