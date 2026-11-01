@@ -80,112 +80,6 @@ body {
     background: none !important
 } */
 
-/* p {
-    color: white;
-    text-align: center;
-    font-size: 20px;
-}
-
-.typed-cursor {
-    color: gold;
-    background: none !important;
-    font-size: x-large
-}
-
-span#typed {
-    color: white;
-    font-size: 25px;
-} */
-
-/* #typedjs {
-    display: table;
-    margin: 0 auto;
-}
-
-#arrowDown {
-    display: table;
-    margin: 0 auto;
-}
-
-.fa-arrow-down {
-    color: gold;
-    -moz-animation: bounce 3s infinite;
-    -webkit-animation: bounce 3s infinite;
-    animation: bounce 3s infinite;
-}
-
-@-moz-keyframes bounce {
-
-    0%,
-    20%,
-    50%,
-    80%,
-    100% {
-        -moz-transform: translateY(0);
-        transform: translateY(0);
-    }
-
-    40% {
-        -moz-transform: translateY(-30px);
-        transform: translateY(-30px);
-    }
-
-    60% {
-        -moz-transform: translateY(-15px);
-        transform: translateY(-15px);
-    }
-}
-
-@-webkit-keyframes bounce {
-
-    0%,
-    20%,
-    50%,
-    80%,
-    100% {
-        -webkit-transform: translateY(0);
-        transform: translateY(0);
-    }
-
-    40% {
-        -webkit-transform: translateY(-30px);
-        transform: translateY(-30px);
-    }
-
-    60% {
-        -webkit-transform: translateY(-15px);
-        transform: translateY(-15px);
-    }
-}
-
-@keyframes bounce {
-
-    0%,
-    20%,
-    50%,
-    80%,
-    100% {
-        -moz-transform: translateY(0);
-        -ms-transform: translateY(0);
-        -webkit-transform: translateY(0);
-        transform: translateY(0);
-    }
-
-    40% {
-        -moz-transform: translateY(-30px);
-        -ms-transform: translateY(-30px);
-        -webkit-transform: translateY(-30px);
-        transform: translateY(-30px);
-    }
-
-    60% {
-        -moz-transform: translateY(-15px);
-        -ms-transform: translateY(-15px);
-        -webkit-transform: translateY(-15px);
-        transform: translateY(-15px);
-    }
-} */
-
 .topL {
     float: left;
     opacity: 0.5;
@@ -261,34 +155,11 @@ span#typed {
     margin-right: 0% !important;
 }
 
-
-
-
 /* -------------------------------- 
 
 Primary style
 
 -------------------------------- */
-/* html * {
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
-
-*,
-*:after,
-*:before {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-}
-
-body {
-    font-size: 100%;
-    font-family: "Droid Serif", serif;
-    color: #7f8c97;
-    background-color: #e9f0f5;
-}
- */
 .skillsA {
     color: #acb7c0;
     text-decoration: none;
@@ -880,19 +751,6 @@ header h1 {
 /* Config */
 /* Pauls awesome mixin */
 /* Styles */
-/* html,
-body {
-    height: 100%;
-}
-
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 2rem;
-    overflow: hidden;
-}
- */
 .page-bg {
     position: fixed;
     top: 0;
@@ -911,12 +769,6 @@ body {
 .particle:after {
     background: transparent;
 }
-
-/* .particle:after {
-    position: absolute;
-    content: "";
-    top: 2560px;
-} */
 
 .particle-1 {
     -webkit-animation: animParticle 60s linear infinite;
@@ -4115,7 +3967,6 @@ body {
     display: block;
 }
 
-
 .socialMedia{
     top: 50%;
     width: 100%;
@@ -4133,7 +3984,6 @@ body {
     overflow: hidden;
     position: relative;
 }
-
 
 .socialMediaBtn i{
     line-height: 90px;
@@ -4220,7 +4070,6 @@ body {
        }
 }
 
-
 @media (prefers-reduced-motion: reduce) {
 
     *,
@@ -4273,7 +4122,6 @@ body {
     height: 100vh;
     height: 100dvh;
 }
-
 
 #section-nav {
     position: fixed;
@@ -4347,7 +4195,6 @@ body {
         scroll-behavior: auto;
     }
 }
-
 
 /* ---------- Responsive ---------- */
 
@@ -4563,7 +4410,6 @@ body {
     }
 }
 
-
 /* naslov sekcije Team */
 .sectionTitle {
     margin: 0;
@@ -4610,7 +4456,6 @@ body {
         font-size: 24px;
     }
 }
-
 
 /* ---------- Pristupacnost ---------- */
 .visually-hidden {
@@ -4669,4 +4514,37 @@ body {
 .emailBody .emailInfo .infoLine input#send:focus-visible {
     background-color: #0366c8;
     color: #fff;
+}
+
+/* ---------- Klase umjesto inline stilova ---------- */
+.is-hidden {
+    display: none !important;
+}
+
+.teamName {
+    margin-bottom: 1rem;
+    color: #fff;
+    font-size: 18px;
+}
+
+.skillsCategory {
+    padding-top: 1%;
+    padding-left: 10%;
+    color: #fff;
+}
+
+.skillsCategory--web {
+    margin-left: 140px;
+}
+
+.skillsCategory--mobile {
+    margin-left: 110px;
+}
+
+.skillsCategory--graphic {
+    margin-left: 200px;
+}
+
+.skillsCategory--software {
+    margin-left: 85px;
 }

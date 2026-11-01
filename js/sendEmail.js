@@ -72,11 +72,20 @@ window.onload = function () {
             toastr.error("Please enter your message.")
         } else {
             $.ajax({
-                url: "sendEmail.php?task=message&userEmail=" + userEmail + "&userName=" + userName + "&userSubject=" + userSubject + "&userMessage=" + userMessage,
+                url: "sendEmail.php",
+                method: "POST",
+                data: {
+                    task: "message",
+                    userEmail: userEmail,
+                    userName: userName,
+                    userSubject: userSubject,
+                    userMessage: userMessage,
+                    website: $('#website').val()
+                },
                 success: function (data) {
                     if (data.indexOf('sent') > -1) {
                         toastr.success("Thank you.")
-                        this.disabled = true;
+                        sendBtn.disabled = true;
 
                         startAnimation();
                         setTimeout(function () {
