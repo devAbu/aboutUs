@@ -5,12 +5,10 @@
   "private": true,
   "devDependencies": {
     "http-server": "^14.1.1",
-    "less": "^4.9.1",
     "prettier": "^3.9.10",
     "sharp": "^0.35.5"
   },
   "scripts": {
-    "start": "http-server -p 8765 -c-1",
-    "build:css": "lessc css/project.less css/project.css"
+    "start": "http-server -p 8765 -c-1"
   }
 }

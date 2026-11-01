@@ -64,7 +64,6 @@
 
     <link rel="stylesheet" href="css/style.css">
 
-    <link rel="stylesheet" href="css/project.css">
 
     <!--Za vetical timeline-->
 
@@ -343,147 +342,55 @@
             </div>
         </section>
         <section class="section s4" id="projectsSection" aria-labelledby="projectsTitle">
-            <div id="project">
-            <h2 id="projectsTitle" class="visually-hidden">Our Projects</h2>
-            <div class="page-bg"></div>
-
-            <div class="animation-wrapper">
-                <div class="particle particle-1"></div>
-                <div class="particle particle-2"></div>
-                <div class="particle particle-3"></div>
-                <div class="particle particle-4"></div>
-                <!-- 
-                <div class="particle particle-5"></div> -->
-            </div>
-
-            <div class="cards">
-                <div class="card">
-                    <img class="card__image" loading="lazy" width="250" height="150" src="images/project-ab3d-akademija.webp" alt="AB3D Akademija" />
-                    <div class="card-title">
-                        <a href="#" class="toggle-info btn" tabindex="-1" aria-hidden="true">
-                            <span class="left"></span>
-                            <span class="right"></span>
-                        </a>
-                        <h4 class="clientFont" aria-level="3">
-                            AB3D Akademija
-                            </h4>
-                    </div>
-                    <div class="card-flap flap1">
-                        <div class="card-description">
-                            Opis firme
+            <div id="project" class="projects">
+                <header class="sectionHead">
+                    <h2 id="projectsTitle" class="sectionHeading">Our Projects</h2>
+                    <p class="sectionIntro">A selection of the clients and brands we have worked with.</p>
+                </header>
+                <ul class="projectGrid">
+                    <li class="projectCard" data-reveal>
+                        <div class="projectLogo" style="--logo-bg: #000">
+                            <img src="images/project-ab3d-akademija.webp" alt="AB3D Akademija logo" width="500" height="300" loading="lazy">
                         </div>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <img class="card__image" loading="lazy" width="250" height="150" src="images/project-btt.webp" alt="BTT" />
-                    <div class="card-title">
-                        <a href="#" class="toggle-info btn" tabindex="-1" aria-hidden="true">
-                            <span class="left"></span>
-                            <span class="right"></span>
-                        </a>
-                        <h4 class="clientFont" aria-level="3">
-                            Balkan Tourist Travel
-                            </h4>
-                    </div>
-                    <div class="card-flap flap1">
-                        <div class="card-description">
-                            Opis firme
+                        <h3 class="projectName">AB3D Akademija</h3>
+                    </li>
+                    <li class="projectCard" data-reveal>
+                        <div class="projectLogo" style="--logo-bg: #fff">
+                            <img src="images/project-btt.webp" alt="Balkan Tourist Travel logo" width="500" height="300" loading="lazy">
                         </div>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <img class="card__image" loading="lazy" width="250" height="150" src="images/project-moje-naocale.webp" alt="Moje naocale" />
-                    <div class="card-title">
-                        <a href="#" class="toggle-info btn" tabindex="-1" aria-hidden="true">
-                            <span class="left"></span>
-                            <span class="right"></span>
-                        </a>
-                        <h4 class="clientFont" aria-level="3">
-                            Moje naocale
-                            </h4>
-                    </div>
-                    <div class="card-flap flap1">
-                        <div class="card-description">
-                            Opis firme
+                        <h3 class="projectName">Balkan Tourist Travel</h3>
+                    </li>
+                    <li class="projectCard" data-reveal>
+                        <div class="projectLogo" style="--logo-bg: #000">
+                            <img src="images/project-moje-naocale.webp" alt="Moje naocale logo" width="500" height="300" loading="lazy">
                         </div>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <img class="card__image" loading="lazy" width="250" height="150" src="images/project-suessa.webp" alt="Suessa" />
-                    <div class="card-title">
-                        <a href="#" class="toggle-info btn" tabindex="-1" aria-hidden="true">
-                            <span class="left"></span>
-                            <span class="right"></span>
-                        </a>
-                        <h4 class="clientFont" aria-level="3">
-                            Suessa
-                            </h4>
-                    </div>
-                    <div class="card-flap flap1">
-                        <div class="card-description">
-                            Opis firme
+                        <h3 class="projectName">Moje naocale</h3>
+                    </li>
+                    <li class="projectCard" data-reveal>
+                        <div class="projectLogo" style="--logo-bg: #000">
+                            <img src="images/project-suessa.webp" alt="Suessa logo" width="500" height="300" loading="lazy">
                         </div>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <img class="card__image" loading="lazy" width="250" height="150" src="images/project-wasdra.webp" alt="Wasdra" />
-                    <div class="card-title">
-                        <a href="#" class="toggle-info btn" tabindex="-1" aria-hidden="true">
-                            <span class="left"></span>
-                            <span class="right"></span>
-                        </a>
-                        <h4 class="clientFont" aria-level="3">
-                            Wasdra
-                            </h4>
-                    </div>
-                    <div class="card-flap flap1">
-                        <div class="card-description">
-                            Opis firme
+                        <h3 class="projectName">Suessa</h3>
+                    </li>
+                    <li class="projectCard" data-reveal>
+                        <div class="projectLogo" style="--logo-bg: #426fb3">
+                            <img src="images/project-wasdra.webp" alt="Wasdra logo" width="500" height="300" loading="lazy">
                         </div>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <img class="card__image" loading="lazy" width="250" height="150" src="images/project-wool-carpet.webp" alt="Wool Carpet" />
-                    <div class="card-title">
-                        <a href="#" class="toggle-info btn" tabindex="-1" aria-hidden="true">
-                            <span class="left"></span>
-                            <span class="right"></span>
-                        </a>
-                        <h4 class="clientFont" aria-level="3">
-                            Wool Carpet
-                            </h4>
-                    </div>
-                    <div class="card-flap flap1">
-                        <div class="card-description">
-                            Opis firme
+                        <h3 class="projectName">Wasdra</h3>
+                    </li>
+                    <li class="projectCard" data-reveal>
+                        <div class="projectLogo" style="--logo-bg: #fff">
+                            <img src="images/project-wool-carpet.webp" alt="Wool Carpet logo" width="500" height="300" loading="lazy">
                         </div>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <img class="card__image" loading="lazy" width="250" height="150" src="images/project-al-amel.webp" alt="Al Amel school" />
-                    <div class="card-title">
-                        <a href="#" class="toggle-info btn" tabindex="-1" aria-hidden="true">
-                            <span class="left"></span>
-                            <span class="right"></span>
-                        </a>
-                        <h4 class="clientFont" aria-level="3">
-                            Al-amel school
-                        </h4>
-                    </div>
-                    <div class="card-flap flap1">
-                        <div class="card-description">
-                            Opis firme
+                        <h3 class="projectName">Wool Carpet</h3>
+                    </li>
+                    <li class="projectCard" data-reveal>
+                        <div class="projectLogo" style="--logo-bg: #000">
+                            <img src="images/project-al-amel.webp" alt="Al-amel school logo" width="500" height="300" loading="lazy">
                         </div>
-                    </div>
-                </div>
-
-            </div>
+                        <h3 class="projectName">Al-amel school</h3>
+                    </li>
+                </ul>
             </div>
         </section>
         <section class="section s5" id="contactSection" aria-labelledby="contactTitle">
@@ -612,7 +519,6 @@
     <script src="https://unpkg.com/splitting@1.0.6/dist/splitting.min.js"
         integrity="sha384-taxnKSnzdVS5gZB4jZcieFZlmBPQMFqhdEmCScZsrIFCxX8Zizq4fKJJH5kBwMXT" crossorigin="anonymous"></script>
     <script src="js/toastr.js"></script>
-    <script src="js/project.js"></script>
     <script src="js/sendEmail.js"></script>
 
 </body>
