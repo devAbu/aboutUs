@@ -67,7 +67,6 @@
     <link rel="stylesheet" href="css/project.css">
 
     <!--Za vetical timeline-->
-    <link rel="stylesheet" href="./node_modules/sal.js/dist/sal.css">
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"
         integrity="sha384-1H217gwSVyLSIfaLxHbE7dRb3v4mYCKbpQvzx0cegeju1MVsGrX5xXxAvs/HgeFs" crossorigin="anonymous"></script>
@@ -224,11 +223,11 @@
             </div>
             <div id="home"></div>
         </section>
-        <section class="section s2" id="skillsSection" aria-labelledby="skillsTitle">
+        <section class="section s2" id="skillsSection" aria-labelledby="sectionHeading">
             <div id="skills" class="skills">
-                <header class="skillsHead">
-                    <h2 id="skillsTitle" class="skillsTitle">Our Skills</h2>
-                    <p class="skillsIntro">The technologies and tools we use to turn your idea into a finished product.</p>
+                <header class="sectionHead">
+                    <h2 id="sectionHeading" class="sectionHeading">Our Skills</h2>
+                    <p class="sectionIntro">The technologies and tools we use to turn your idea into a finished product.</p>
                 </header>
                 <div class="skillsGrid">
                     <article class="skillCard skillCard--wide" data-reveal>
@@ -292,94 +291,55 @@
             </div>
         </section>
         <section class="section s3" id="teamsSection" aria-labelledby="teamsTitle">
-            <div id="teams">
-            <h2 id="teamsTitle" class="sectionTitle">Our Team</h2>
-            <div class="container">
-              <div class="row">
-                <div id="abuSmall" class="col-4 col-sm-4 mt-5 teamMoreSmall">
-                  <p class="teamName">Abdulrahman Almonajed</p>
-                  <p class="teamName">Full-stack developer</p>
-                </div>
-                <div class="col-8 col-sm-8 col-md-6 mt-4 mt-sm-4 mt-md-0">
-                  <img class="topL img-responsive" id="slika1" src="./images/team-abdulrahman.webp" width="200" height="200" data-member="abu" alt="Abdulrahman Almonajed">
-                </div>
-                <div id="kisoSmall" class="col-4 col-sm-4 mt-5 teamMoreSmall">
-                  <p class="teamName">Anes Karic</p>
-                  <p class="teamName">Front-end developer</p>
-                </div>
-                <div class="col-8 col-sm-8 col-md-6 mt-4 mt-sm-4 mt-md-0">
-                  <img class="topR img-responsive" id="slika2" src="./images/team-anes.webp" width="200" height="200" data-member="kiso" alt="Anes Karic">
-                </div>
-              </div>
-              <div class="row center">
-                <div>
-                  <img class="centerImg img-responsive" id="slika" src="./images/team-obada.webp" width="100" height="300" data-member="combe" alt="Obada Almonajed"
-                    style="display: none; opacity: 0">
-                </div>
-                <div id="abu" class="offset-0 offset-sm-0 offset-md-3 col-6 col-sm-6 col-md-2 mt-5 teamMore" data-sal-duration="10"
-                  data-sal="fade-up" data-sal-delay="1000" data-sal-easing="ease-out-bounce">
-                  <p class="teamName">Abdulrahman Almonajed</p>
-                  <p class="teamName">Full-stack developer</p>
-                </div>
-                <div id="kiso" class="offset-0 offset-sm-0 offset-md-3 col-6 col-sm-6 col-md-2 mt-5 teamMore" data-sal-duration="10"
-                  data-sal="fade-up" data-sal-delay="1000" data-sal-easing="ease-out-bounce">
-                  <p class="teamName">Anes Karic</p>
-                  <p class="teamName">Front-end developer</p>
-                </div>
-                <div id="combe" class="offset-0 offset-sm-0 offset-md-3 col-6 col-sm-6 col-md-2 mt-5 active teamMore"
-                  data-sal-duration="10" data-sal="fade-up" data-sal-delay="1000" data-sal-easing="ease-out-bounce">
-                  <p class="teamName">Obada Almonajed</p>
-                  <p class="teamName">Founder</p>
-                </div>
-                <div id="aldin" class="offset-0 offset-sm-0 offset-md-3 col-6 col-sm-6 col-md-2 mt-5 teamMore"
-                  data-sal-duration="10" data-sal="fade-up" data-sal-delay="1000" data-sal-easing="ease-out-bounce">
-                  <p class="teamName">Aldin Becic</p>
-                  <p class="teamName">Back-end developer</p>
-                </div>
-                <div id="dizda" class="offset-0 offset-sm-0 offset-md-3 col-6 col-sm-6 col-md-2 mt-5 teamMore"
-                  data-sal-duration="10" data-sal="fade-up" data-sal-delay="1000" data-sal-easing="ease-out-bounce">
-                  <p class="teamName">Tarik Dizdar</p>
-                  <p class="teamName">Manager</p>
-                </div>
-                <div id="muha" class="offset-0 offset-sm-0 offset-md-3 col-6 col-sm-6 col-md-2 mt-5 teamMore" data-sal-duration="10"
-                  data-sal="fade-up" data-sal-delay="1000" data-sal-easing="ease-out-bounce">
-                  <p class="teamName">Muhamed Hasanspahic</p>
-                  <p class="teamName">Front-end developer</p>
-                </div>
-                <div id="combeSmall" class="col-4 col-sm-4 mt-5 teamMoreSmall">
-                  <p class="teamName">Obada Almonajed</p>
-                  <p class="teamName">Founder</p>
-                </div>
-                <div class="col-8 col-sm-8 col-md-4 mt-4 mt-sm-4 mt-md-0 mb-0 mb-sm-0 mb-md-2">
-                  <img class="centerImg img-responsive" id="slika3" src="./images/team-obada.webp" width="300" height="300" data-member="combe" alt="Obada Almonajed">
-                </div>
-              </div>
-              <div class="row">
-                <div id="aldinSmall" class="col-4 col-sm-4 mt-5 teamMoreSmall">
-                  <p class="teamName">Aldin Becic</p>
-                  <p class="teamName">Back-end developer</p>
-                </div>
-                <div class="col-8 col-sm-8 col-md-4 mt-4 mt-sm-4 mt-md-0">
-                  <img class="bottomL img-responsive" id="slika4" src="./images/team-aldin.webp" width="200" height="200" data-member="aldin" alt="Aldin Becic">
-                </div>
-                <div id="dizdaSmall" class="col-4 col-sm-4 mt-5 teamMoreSmall">
-                  <p class="teamName">Tarik Dizdar</p>
-                  <p class="teamName">Manager</p>
-                </div>
-                <div class="col-8 col-sm-8 col-md-4 mt-4 mt-sm-4 mt-md-0">
-                  <img class="bottomC img-responsive" id="slika5" src="./images/team-tarik.webp" width="200" height="200"
-                    data-member="dizda" alt="Tarik Dizdar">
-                </div>
-                <div id="muhaSmall" class="col-4 col-sm-4 mt-5 teamMoreSmall">
-                  <p class="teamName">Muhaned Hasanspahic</p>
-                  <p class="teamName">Front-end developer</p>
-                </div>
-                <div class="col-8 col-sm-8 col-md-4 mt-4 mt-sm-4 mt-md-0">
-                  <img class="bottomR img-responsive" id="slika6" src="./images/team-muha.webp" width="200" height="200"
-                    data-member="muha" alt="Muhaned Hasanspahic">
-                </div>
-              </div>
-            </div>
+            <div id="teams" class="team">
+                <header class="sectionHead">
+                    <h2 id="teamsTitle" class="sectionHeading">Our Team</h2>
+                    <p class="sectionIntro">The people behind ABOC. A small team that cares about every project.</p>
+                </header>
+                <ul class="teamGrid">
+                    <li class="teamCard teamCard--founder" data-reveal>
+                        <div class="teamPhoto">
+                            <img src="./images/team-obada.webp" alt="Obada Almonajed" width="360" height="270" loading="lazy">
+                        </div>
+                        <h3 class="teamName">Obada Almonajed</h3>
+                        <p class="teamRole">Founder</p>
+                    </li>
+                    <li class="teamCard" data-reveal>
+                        <div class="teamPhoto">
+                            <img src="./images/team-tarik.webp" alt="Tarik Dizdar" width="360" height="270" loading="lazy">
+                        </div>
+                        <h3 class="teamName">Tarik Dizdar</h3>
+                        <p class="teamRole">Manager</p>
+                    </li>
+                    <li class="teamCard" data-reveal>
+                        <div class="teamPhoto">
+                            <img src="./images/team-abdulrahman.webp" alt="Abdulrahman Almonajed" width="360" height="270" loading="lazy">
+                        </div>
+                        <h3 class="teamName">Abdulrahman Almonajed</h3>
+                        <p class="teamRole">Full-stack developer</p>
+                    </li>
+                    <li class="teamCard" data-reveal>
+                        <div class="teamPhoto">
+                            <img src="./images/team-aldin.webp" alt="Aldin Becic" width="360" height="270" loading="lazy">
+                        </div>
+                        <h3 class="teamName">Aldin Becic</h3>
+                        <p class="teamRole">Back-end developer</p>
+                    </li>
+                    <li class="teamCard" data-reveal>
+                        <div class="teamPhoto">
+                            <img src="./images/team-anes.webp" alt="Anes Karic" width="360" height="270" loading="lazy">
+                        </div>
+                        <h3 class="teamName">Anes Karic</h3>
+                        <p class="teamRole">Front-end developer</p>
+                    </li>
+                    <li class="teamCard" data-reveal>
+                        <div class="teamPhoto">
+                            <img src="./images/team-muha.webp" alt="Muhaned Hasanspahic" width="360" height="270" loading="lazy">
+                        </div>
+                        <h3 class="teamName">Muhaned Hasanspahic</h3>
+                        <p class="teamRole">Front-end developer</p>
+                    </li>
+                </ul>
             </div>
         </section>
         <section class="section s4" id="projectsSection" aria-labelledby="projectsTitle">
@@ -652,14 +612,6 @@
     <script src="https://unpkg.com/splitting@1.0.6/dist/splitting.min.js"
         integrity="sha384-taxnKSnzdVS5gZB4jZcieFZlmBPQMFqhdEmCScZsrIFCxX8Zizq4fKJJH5kBwMXT" crossorigin="anonymous"></script>
     <script src="js/toastr.js"></script>
-    <script src="./node_modules/sal.js/dist/sal.js"></script>
-    <script>
-        sal({
-            threshold: 1,
-            once: false,
-        });
-    </script>
-    <script src="js/swapImage.js"></script>
     <script src="js/project.js"></script>
     <script src="js/sendEmail.js"></script>
 

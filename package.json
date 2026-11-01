@@ -3,9 +3,6 @@
   "version": "1.0.0",
   "description": "aboc about us page",
   "private": true,
-  "dependencies": {
-    "sal.js": "0.6.2"
-  },
   "devDependencies": {
     "http-server": "^14.1.1",
     "less": "^4.9.1",
