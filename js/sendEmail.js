@@ -9,7 +9,9 @@
     var again = document.getElementById('sendAgain');
     var scene = document.getElementById('envelopeScene');
     var card = form.parentElement;
-    var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var host = location.hostname;
+    var isDev = host === 'localhost' || host === '127.0.0.1' || host === '[::1]' || /\.localhost$/.test(host);
+    var reduceMotion =window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
     var rules = [
         { id: 'fromName', message: 'Please enter your name.' },
@@ -97,6 +99,17 @@
         });
 
         setBusy(true);
+
+        // dev mod (localhost): nema PHP-a ni maila, pa se samo odigra animacija nakon uspjesne validacije
+        if (isDev) {
+            console.info('[dev] Forma je validna. Mail se ne salje na localhost, prikazujem samo animaciju.');
+            setTimeout(function () {
+                playEnvelope();
+                setBusy(false);
+            }, 400);
+            return;
+        }
+
         fetch('sendEmail.php', { method: 'POST', body: body })
             .then(function (response) {
                 return response.text().then(function (text) {
