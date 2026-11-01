@@ -141,6 +141,17 @@ var RENDERER = {
         requestAnimationFrame(this.render);
         if (!this.isVisible) return;
 
+        // kad nema aktivnih hexagona, zadnji frame ostaje na ekranu i ne crta se ponovo
+        var active = false;
+        for (var j = 0, n = this.hexagons.length; j < n; j++) {
+            if (this.hexagons[j].selections.length || this.hexagons[j].sourceIndices.length) {
+                active = true;
+                break;
+            }
+        }
+        if (!active && this.idleDrawn) return;
+        this.idleDrawn = !active;
+
         this.context.fillStyle = 'hsla(210, 70%, 10%, 0.3)';
         this.context.fillRect(0, 0, this.width, this.height);
 
@@ -180,7 +191,7 @@ HEXAGON.prototype = {
         this.select();
     },
     select: function () {
-        this.hue = this.renderer.getRandomValue(100, 300);
+        this.hue = this.renderer.getRandomValue(170, 260);
         this.selections.push({
             count: 0,
             hue: this.hue
