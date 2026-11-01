@@ -1393,7 +1393,7 @@ body {
 
 .envFlap {
     position: absolute;
-    z-index: 4;
+    z-index: 1;
     top: 0;
     left: 0;
     width: 100%;
@@ -1405,7 +1405,9 @@ body {
     transition: transform 0.6s ease;
 }
 
+/* otvoren zaklopac je iza papira, a kad se zatvori dolazi ispred njega i dzepa */
 .envelope.is-closed .envFlap {
+    z-index: 4;
     transform: rotateX(0deg);
 }
 
