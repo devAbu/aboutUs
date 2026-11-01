@@ -7,7 +7,11 @@ const app = new PIXI.Application({
     width: 256,
     height: 256,
     antialias: true,
+    resolution: window.devicePixelRatio || 1,
 });
+
+// koristi se za zoom na kraju intra (js/src/shape.js)
+window.introStage = app.stage;
 
 document.body.appendChild(app.view);
 

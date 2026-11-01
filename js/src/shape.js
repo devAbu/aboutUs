@@ -253,8 +253,18 @@ $(document).ready(function () {
         $('body').append('<script src="js/snap.js"></script>');
     }
 
+    // zoom na kraju intra: skalira se Pixi scena (vektori ostaju ostri), a ne canvas preko CSS-a
     timers.push(setTimeout(function () {
-        $('canvas').not('div.container > canvas').addClass('zoomCanvas');
+        var stage = window.introStage;
+        if (stage && window.TweenMax) {
+            var w = window.innerWidth;
+            var h = window.innerHeight;
+            stage.pivot.set(w / 2, h / 2);
+            stage.position.set(w / 2, h / 2);
+            TweenMax.to(stage.scale, 1.5, { x: 16, y: 16, ease: Power2.easeIn });
+        } else {
+            $('canvas').not('div.container > canvas').addClass('zoomCanvas');
+        }
     }, 3500));
     timers.push(setTimeout(finishIntro, 5000));
 

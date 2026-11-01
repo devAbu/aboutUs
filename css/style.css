@@ -31,17 +31,20 @@ body {
     bottom: 20px;
     z-index: 10000;
     padding: 8px 18px;
-    border: 1px solid rgba(255, 255, 255, 0.6);
+    border: 1px solid #fff;
     border-radius: 20px;
-    background: rgba(0, 0, 0, 0.35);
+    background: #0c3455;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.5), 0 4px 14px rgba(0, 0, 0, 0.4);
     color: #fff;
     font-size: 14px;
     cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
 }
 
 .skip-intro:hover,
 .skip-intro:focus-visible {
-    background: rgba(255, 255, 255, 0.2);
+    background: #1f6fa8;
+    transform: translateY(-1px);
 }
 
 .dark {
