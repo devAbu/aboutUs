@@ -7,5 +7,15 @@
     "jquery": "3.4.1",
     "sal.js": "0.6.2",
     "toastr": "2.1.4"
+  },
+  "devDependencies": {
+    "http-server": "^14.1.1",
+    "less": "^4.9.1",
+    "prettier": "^3.9.10",
+    "sharp": "^0.35.5"
+  },
+  "scripts": {
+    "start": "http-server -p 8765 -c-1",
+    "build:css": "lessc css/project.less css/project.css"
   }
 }

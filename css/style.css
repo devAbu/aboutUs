@@ -22,7 +22,26 @@ body {
 
 .zoomCanvas {
     transform: scale(16);
-    transition: all 3s ease-in;
+    transition: all 1.5s ease-in;
+}
+
+.skip-intro {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 10000;
+    padding: 8px 18px;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: 20px;
+    background: rgba(0, 0, 0, 0.35);
+    color: #fff;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.skip-intro:hover,
+.skip-intro:focus-visible {
+    background: rgba(255, 255, 255, 0.2);
 }
 
 .dark {
@@ -4255,4 +4274,18 @@ body {
        .s5{
            z-index: 999 !important
        }
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        animation-delay: 0s !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
 }

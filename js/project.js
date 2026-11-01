@@ -1,11 +1,9 @@
 $(document).ready(function () {
     var zindex = 10;
-    console.log('project')
 
 
     $('.card').click(function (e) {
         e.preventDefault()
-        console.log('test')
 
         var isShowing = false;
 

@@ -237,24 +237,40 @@ export class Polygon extends Base {
 
 }
 
-//ZOOM
+//ZOOM (intro)
 $(document).ready(function () {
-    setTimeout(function () {
-        $('canvas').not('div.container > canvas').addClass('zoomCanvas');
-        $('body').append("<script>$('#skills').load('./views/skills.html')</script>")
-        $('body').append("<script>$('#teams').load('./views/teams.html')</script>")
-        $('body').append("<script>$('#project').load('./views/project.html')</script>")
-    }, 7000);
+    var introDone = false;
+    var timers = [];
 
-    setTimeout(function () {
+    // sekcije se ucitavaju odmah (u paraleli), ne cekaju kraj intra
+    $('#skills').load('./views/skills.html');
+    $('#teams').load('./views/teams.html');
+    $('#project').load('./views/project.html');
+
+    function finishIntro() {
+        if (introDone) return;
+        introDone = true;
+        timers.forEach(clearTimeout);
         $('canvas').not('div.container > canvas').remove();
-        /* $('.welcome').css('background-color', 'white'); */
         $('.welcome').remove();
+        $('body').append('<script src="js/fullPage.js"></script>');
+        $('#home').load('./views/home.html');
+        $('#fullPage').removeClass('hidden');
+    }
 
-    }, 9500);
-    setTimeout(function () {
-        $('body').append('<script src="js/fullPage.js"></script>')
-        $('body').append("<script>$('#home').load('./views/home.html')</script>")
-        $('#fullPage').removeClass('hidden')
-    }, 9500)
-})
+    timers.push(setTimeout(function () {
+        $('canvas').not('div.container > canvas').addClass('zoomCanvas');
+    }, 3500));
+    timers.push(setTimeout(finishIntro, 5000));
+
+    // korisnici koji traze manje animacija preskacu intro
+    if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        finishIntro();
+    }
+
+    // preskoci intro: klik na dugme, Esc ili Enter
+    $(document).on('click', '.skip-intro', finishIntro);
+    $(document).on('keydown', function (e) {
+        if (e.key === 'Escape' || e.key === 'Enter') finishIntro();
+    });
+});

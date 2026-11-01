@@ -8,13 +8,15 @@ $(document).ready(function () {
 
 
                 $(".teamMore").removeClass("active");
-                $("#" + $(this).attr("alt")).addClass("active");
+                $("#" + $(this).attr("data-member")).addClass("active");
 
                 var clickedImage = $(this).attr("src")
                 var centerImage = $("#slika3").attr("src")
 
-                var idClickedImage = $(this).attr("alt")
-                var idCenterImage = $("#slika3").attr("alt")
+                var idClickedImage = $(this).attr("data-member")
+                var altClickedImage = $(this).attr("alt")
+                var idCenterImage = $("#slika3").attr("data-member")
+                var altCenterImage = $("#slika3").attr("alt")
 
                 var centriranaSlika = $('#slika3')
 
@@ -22,7 +24,7 @@ $(document).ready(function () {
                 $(this).fadeOut(1000, function () {
                     $('#slika').css('display', '')
                     $(this).attr('src', centerImage).bind('onreadystatechange load', function () {
-                        $(this).attr('alt', idCenterImage)
+                        $(this).attr('data-member', idCenterImage).attr('alt', altCenterImage)
                         if (this.complete) {
                             $('#slika').css('display', 'none')
                             $(this).fadeIn(1000);
@@ -33,7 +35,7 @@ $(document).ready(function () {
                 centriranaSlika.fadeOut(1000, function () {
                     $('#slika').css('display', '')
                     centriranaSlika.attr('src', clickedImage).bind('onreadystatechange load', function () {
-                        centriranaSlika.attr("alt", idClickedImage)
+                        centriranaSlika.attr("data-member", idClickedImage).attr("alt", altClickedImage)
                         if (this.complete) {
                             centriranaSlika.fadeIn(1000);
                             progress = true

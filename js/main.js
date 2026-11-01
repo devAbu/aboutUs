@@ -1,4 +1,3 @@
-console.log("dadsadsa");
 var RENDERER = {
     RESIZE_INTERVAL: 30,
     RADIUS: 25,
@@ -128,9 +127,19 @@ var RENDERER = {
     bindEvent: function () {
         this.$window.on('resize', this.watchWindowSize);
         this.$container.on('click', this.selectHexagon);
+
+        // ne crtaj hexagone kad sekcija nije vidljiva
+        this.isVisible = true;
+        if ('IntersectionObserver' in window) {
+            var self = this;
+            new IntersectionObserver(function (entries) {
+                self.isVisible = entries[0].isIntersecting;
+            }).observe(this.$container.get(0));
+        }
     },
     render: function () {
         requestAnimationFrame(this.render);
+        if (!this.isVisible) return;
 
         this.context.fillStyle = 'hsla(210, 70%, 10%, 0.3)';
         this.context.fillRect(0, 0, this.width, this.height);
