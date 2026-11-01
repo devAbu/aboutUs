@@ -5,19 +5,62 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>ABOC</title>
+    <title>ABOC | Web, Mobile &amp; Software Development</title>
 
+    <meta name="description"
+        content="ABOC is a team of computer science and IT engineers building websites, mobile apps and software, with graphic design and video editing. See our skills, team and projects.">
+    <meta name="keywords" content="aboc, web development, mobile development, software development, graphic design, IT">
     <meta name="author" content="ABOC">
-    <meta name="description" content="TEKST O NAMA">
-    <meta name="keyword" content="aboc, web, development, IT">
-    <meta name="Copyright" content="ABOC">
-    <meta name="Designer" content="ABOC">
-    <meta name="Publisher" content="ABOC">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#0c3455">
+    <link rel="canonical" href="https://abocdev.com/">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="ABOC">
+    <meta property="og:title" content="ABOC | Web, Mobile &amp; Software Development">
+    <meta property="og:description"
+        content="A team of computer science and IT engineers building websites, mobile apps and software.">
+    <meta property="og:url" content="https://abocdev.com/">
+    <meta property="og:image" content="https://abocdev.com/images/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="ABOC | Web, Mobile &amp; Software Development">
+    <meta name="twitter:description"
+        content="A team of computer science and IT engineers building websites, mobile apps and software.">
+    <meta name="twitter:image" content="https://abocdev.com/images/og-image.png">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "ABOC",
+        "url": "https://abocdev.com/",
+        "logo": "https://abocdev.com/images/og-image.png",
+        "description": "A team of computer science and IT engineers building websites, mobile apps and software.",
+        "telephone": "+387603415908"
+    }
+    </script>
+
+    <noscript>
+        <style>
+            #fullPage,
+            #section-nav {
+                display: block !important;
+            }
+
+            .loader,
+            .welcome,
+            .skip-intro {
+                display: none !important;
+            }
+        </style>
+    </noscript>
 
     <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
     <link rel="preconnect" href="https://unpkg.com" crossorigin>
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-    <link rel="shortcut icon" href="images/logoIcon.ico" type="image/x-icon">
+    <link rel="icon" href="images/logoIcon.ico" sizes="any">
 
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/verticalTimeline.css">
@@ -88,7 +131,7 @@
     </nav>
 
     <main id="fullPage" class="hidden" tabindex="-1">
-        <div class="section s1" id="homeSection">
+        <section class="section s1" id="homeSection" aria-label="Home">
 
             <div class="dark fs">
                 <div class="hold-illustration w-preserve-3d">
@@ -164,34 +207,647 @@
                     </div>
                 </div>
 
-                <div class="title">
+                <h1 class="title">
                     <span class="text2 write" data-splitting>
                         Welcome to ABOC
                     </span>
                     <span aria-hidden="true" class="text2 laser" data-splitting>
                         Welcome to ABOC
                     </span>
-                </div>
+                </h1>
             </div>
             <div id="home"></div>
-        </div>
-        <div class="section s2" id="skillsSection">
-            <div id="skills"></div>
-        </div>
-        <div class="section s3" id="teamsSection">
-            <div id="teams"></div>
-        </div>
-        <div class="section s4" id="projectsSection">
-            <div id="project"></div>
-        </div>
-        <div class="section s5" id="contactSection">
-            <div id="contact"></div>
-        </div>
-    </main>
+        </section>
+        <section class="section s2" id="skillsSection" aria-labelledby="skillsTitle">
+            <div id="skills">
+            <h2 id="skillsTitle" class="sectionTitle">Our Skills</h2>
+            <section id="cd-timeline" class="cd-container">
 
-    <script>
-        $('#contact').load('./views/contact.html')
-    </script>
+              <!-- WEB DEVELOPMENT -->
+              <div class="cd-timeline-block" data-sal-duration="700" data-sal="zoom-in" data-sal-delay="0"
+                data-sal-easing="ease-out-bounce">
+                <div class="cd-timeline-img cd-picture">
+                  <img class="skillsImg" src="./images/code.svg" alt="" loading="lazy">
+                </div>
+                <h2 class="skillsCategory" aria-level="3" style="color:white; padding-left:10%; padding-top: 1%; margin-left: 140px;">Web Development</h2>
+                <br>
+                <br>
+                <br><br>
+                <br>
+                <div data-sal-duration="700" data-sal="slide-right" data-sal-delay="0" data-sal-easing="ease-out-bounce"
+                  class="cd-timeline-content">
+                  <h2 class="skillsHeading" aria-level="4">HTML & CSS</h2>
+                </div> <!-- cd-timeline-content -->
+              </div> <!-- cd-timeline-block -->
+
+              <div class="cd-timeline-block" data-sal-duration="700" data-sal="zoom-in" data-sal-delay="0"
+                data-sal-easing="ease-out-bounce">
+                <div class="cd-timeline-img cd-movie" style="display: none;">
+                </div> <!-- cd-timeline-img -->
+
+                <div data-sal-duration="700" data-sal="slide-left" data-sal-delay="0" data-sal-easing="ease-out-bounce"
+                  class="cd-timeline-content" data-sal-duration="700" data-sal="zoom-in" data-sal-delay="0"
+                  data-sal-easing="ease-out-bounce">
+                  <h2 class="skillsHeading" aria-level="4">Javascript</h2>
+                </div> <!-- cd-timeline-content -->
+              </div>
+
+              <div class="cd-timeline-block" data-sal-duration="700" data-sal="zoom-in" data-sal-delay="0"
+                data-sal-easing="ease-out-bounce">
+                <div class="cd-timeline-img cd-movie" style="display: none;">
+                </div> <!-- cd-timeline-img -->
+
+                <div data-sal-duration="700" data-sal="slide-right" data-sal-delay="0" data-sal-easing="ease-out-bounce"
+                  class="cd-timeline-content" data-sal-duration="700" data-sal="zoom-in" data-sal-delay="0"
+                  data-sal-easing="ease-out-bounce">
+                  <h2 class="skillsHeading" aria-level="4">Jquery</h2>
+                </div> <!-- cd-timeline-content -->
+              </div>
+
+              <div class="cd-timeline-block" data-sal-duration="700" data-sal="zoom-in" data-sal-delay="0"
+                data-sal-easing="ease-out-bounce">
+                <div class="cd-timeline-img cd-movie" style="display: none;">
+                </div> <!-- cd-timeline-img -->
+
+                <div data-sal-duration="700" data-sal="slide-left" data-sal-delay="0" data-sal-easing="ease-out-bounce"
+                  class="cd-timeline-content" data-sal-duration="700" data-sal="zoom-in" data-sal-delay="0"
+                  data-sal-easing="ease-out-bounce">
+                  <h2 class="skillsHeading" aria-level="4">Angular</h2>
+                </div> <!-- cd-timeline-content -->
+              </div>
+
+              <div class="cd-timeline-block" data-sal-duration="700" data-sal="zoom-in" data-sal-delay="0"
+                data-sal-easing="ease-out-bounce">
+                <div class="cd-timeline-img cd-movie" style="display: none;">
+                </div> <!-- cd-timeline-img -->
+
+                <div data-sal-duration="700" data-sal="slide-right" data-sal-delay="0" data-sal-easing="ease-out-bounce"
+                  class="cd-timeline-content" data-sal-duration="700" data-sal="zoom-in" data-sal-delay="0"
+                  data-sal-easing="ease-out-bounce">
+                  <h2 class="skillsHeading" aria-level="4">ReactJS</h2>
+                </div> <!-- cd-timeline-content -->
+              </div>
+
+              <div class="cd-timeline-block" data-sal-duration="700" data-sal="zoom-in" data-sal-delay="0"
+                data-sal-easing="ease-out-bounce">
+                <div class="cd-timeline-img cd-movie" style="display: none;">
+                </div> <!-- cd-timeline-img -->
+
+                <div data-sal-duration="700" data-sal="slide-left" data-sal-delay="0" data-sal-easing="ease-out-bounce"
+                  class="cd-timeline-content" data-sal-duration="700" data-sal="zoom-in" data-sal-delay="0"
+                  data-sal-easing="ease-out-bounce">
+                  <h2 class="skillsHeading" aria-level="4">Bootstrap</h2>
+                </div> <!-- cd-timeline-content -->
+              </div>
+
+              <div class="cd-timeline-block" data-sal-duration="700" data-sal="zoom-in" data-sal-delay="0"
+                data-sal-easing="ease-out-bounce">
+                <div class="cd-timeline-img cd-movie" style="display: none;">
+                </div> <!-- cd-timeline-img -->
+
+                <div data-sal-duration="700" data-sal="slide-right" data-sal-delay="0" data-sal-easing="ease-out-bounce"
+                  class="cd-timeline-content" data-sal-duration="700" data-sal="zoom-in" data-sal-delay="0"
+                  data-sal-easing="ease-out-bounce">
+                  <h2 class="skillsHeading" aria-level="4">PHP</h2>
+                </div> <!-- cd-timeline-content -->
+              </div>
+
+              <div class="cd-timeline-block" data-sal-duration="700" data-sal="zoom-in" data-sal-delay="0"
+                data-sal-easing="ease-out-bounce">
+                <div class="cd-timeline-img cd-movie" style="display: none;">
+                </div> <!-- cd-timeline-img -->
+
+                <div data-sal-duration="700" data-sal="slide-left" data-sal-delay="0" data-sal-easing="ease-out-bounce"
+                  class="cd-timeline-content" data-sal-duration="700" data-sal="zoom-in" data-sal-delay="0"
+                  data-sal-easing="ease-out-bounce">
+                  <h2 class="skillsHeading" aria-level="4">NodeJS</h2>
+                </div> <!-- cd-timeline-content -->
+              </div>
+
+              <div class="cd-timeline-block" data-sal-duration="700" data-sal="zoom-in" data-sal-delay="0"
+                data-sal-easing="ease-out-bounce">
+                <div class="cd-timeline-img cd-movie" style="display: none;">
+                </div> <!-- cd-timeline-img -->
+
+                <div data-sal-duration="700" data-sal="slide-right" data-sal-delay="0" data-sal-easing="ease-out-bounce"
+                  class="cd-timeline-content" data-sal-duration="700" data-sal="zoom-in" data-sal-delay="0"
+                  data-sal-easing="ease-out-bounce">
+                  <h2 class="skillsHeading" aria-level="4">SQL / MYSQL</h2>
+                </div> <!-- cd-timeline-content -->
+              </div>
+
+              <div class="cd-timeline-block" data-sal-duration="700" data-sal="zoom-in" data-sal-delay="0"
+                data-sal-easing="ease-out-bounce">
+                <div class="cd-timeline-img cd-movie" style="display: none;">
+                </div> <!-- cd-timeline-img -->
+
+                <div data-sal-duration="700" data-sal="slide-left" data-sal-delay="0" data-sal-easing="ease-out-bounce"
+                  class="cd-timeline-content" data-sal-duration="700" data-sal="zoom-in" data-sal-delay="0"
+                  data-sal-easing="ease-out-bounce">
+                  <h2 class="skillsHeading" aria-level="4">MongoDB</h2>
+                </div> <!-- cd-timeline-content -->
+              </div>
+
+              <div class="cd-timeline-block" data-sal-duration="700" data-sal="zoom-in" data-sal-delay="0"
+                data-sal-easing="ease-out-bounce">
+                <div class="cd-timeline-img cd-movie" style="display: none;">
+                </div> <!-- cd-timeline-img -->
+
+                <div data-sal-duration="700" data-sal="slide-right" data-sal-delay="0" data-sal-easing="ease-out-bounce"
+                  class="cd-timeline-content" data-sal-duration="700" data-sal="zoom-in" data-sal-delay="0"
+                  data-sal-easing="ease-out-bounce">
+                  <h2 class="skillsHeading" aria-level="4">Wordpress</h2>
+                </div> <!-- cd-timeline-content -->
+              </div>
+
+              <!-- MOBILE -->
+              <div class="cd-timeline-block" data-sal-duration="700" data-sal="zoom-in" data-sal-delay="0"
+                data-sal-easing="ease-out-bounce">
+                <div class="cd-timeline-img cd-movie">
+                  <img class="skillsImg" src="./images/mobiledev.svg" alt="" loading="lazy">
+                </div>
+                <h2 class="skillsCategory" aria-level="3" style="color:white; padding-left:10%; padding-top: 1%; margin-left: 110px;">Mobile Development</h2>
+                <br>
+                <br>
+                <br>
+                <div data-sal-duration="700" data-sal="slide-right" data-sal-delay="0" data-sal-easing="ease-out-bounce"
+                  class="cd-timeline-content">
+                  <h2 class="skillsHeading" aria-level="4">Android</h2>
+                </div> <!-- cd-timeline-content -->
+              </div> <!-- cd-timeline-block -->
+
+              <div class="cd-timeline-block" data-sal-duration="700" data-sal="zoom-in" data-sal-delay="0"
+                data-sal-easing="ease-out-bounce">
+                <div class="cd-timeline-img cd-movie" style="display: none;">
+                </div> <!-- cd-timeline-img -->
+
+                <div data-sal-duration="700" data-sal="slide-left" data-sal-delay="0" data-sal-easing="ease-out-bounce"
+                  class="cd-timeline-content" data-sal-duration="700" data-sal="zoom-in" data-sal-delay="0"
+                  data-sal-easing="ease-out-bounce">
+                  <h2 class="skillsHeading" aria-level="4">Swift</h2>
+                </div> <!-- cd-timeline-content -->
+              </div> <!-- cd-timeline-block -->
+
+              <div class="cd-timeline-block" data-sal-duration="700" data-sal="zoom-in" data-sal-delay="0"
+                data-sal-easing="ease-out-bounce">
+                <div class="cd-timeline-img cd-movie" style="display: none;">
+                </div> <!-- cd-timeline-img -->
+
+                <div data-sal-duration="700" data-sal="slide-right" data-sal-delay="0" data-sal-easing="ease-out-bounce"
+                  class="cd-timeline-content" data-sal-duration="700" data-sal="zoom-in" data-sal-delay="0"
+                  data-sal-easing="ease-out-bounce">
+                  <h2 class="skillsHeading" aria-level="4">React Native</h2>
+                </div> <!-- cd-timeline-content -->
+              </div> <!-- cd-timeline-block -->
+
+              <!-- WEB DESIGN -->
+              <div class="cd-timeline-block" data-sal-duration="700" data-sal="zoom-in" data-sal-delay="0"
+                data-sal-easing="ease-out-bounce">
+                <div class="cd-timeline-img cd-location ">
+                  <img class="skillsImg" src="./images/code.svg" alt="" loading="lazy">
+                </div>
+                <h2 class="skillsCategory" aria-level="3" style="color:white; padding-left:10%; padding-top: 1%; margin-left: 200px;">Graphic Design</h2>
+                <br>
+                <br>
+                <br>
+                <div data-sal-duration="700" data-sal="slide-right" data-sal-delay="0" data-sal-easing="ease-out-bounce"
+                  class="cd-timeline-content">
+                  <h2 class="skillsHeading" aria-level="4">Photoshop</h2>
+                </div> <!-- cd-timeline-content -->
+              </div> <!-- cd-timeline-block -->
+
+              <div class="cd-timeline-block" data-sal-duration="700" data-sal="zoom-in" data-sal-delay="0"
+                data-sal-easing="ease-out-bounce">
+                <div class="cd-timeline-img cd-movie" style="display: none;">
+                </div> <!-- cd-timeline-img -->
+
+                <div data-sal-duration="700" data-sal="slide-left" data-sal-delay="0" data-sal-easing="ease-out-bounce"
+                  class="cd-timeline-content" data-sal-duration="700" data-sal="zoom-in" data-sal-delay="0"
+                  data-sal-easing="ease-out-bounce">
+                  <h2 class="skillsHeading" aria-level="4">Illustrator</h2>
+                </div> <!-- cd-timeline-content -->
+              </div> <!-- cd-timeline-block -->
+
+              <div class="cd-timeline-block" data-sal-duration="700" data-sal="zoom-in" data-sal-delay="0"
+                data-sal-easing="ease-out-bounce">
+                <div class="cd-timeline-img cd-movie" style="display: none;">
+                </div> <!-- cd-timeline-img -->
+
+                <div data-sal-duration="700" data-sal="slide-right" data-sal-delay="0" data-sal-easing="ease-out-bounce"
+                  class="cd-timeline-content" data-sal-duration="700" data-sal="zoom-in" data-sal-delay="0"
+                  data-sal-easing="ease-out-bounce">
+                  <h2 class="skillsHeading" aria-level="4">Adobe After Effects</h2>
+                </div> <!-- cd-timeline-content -->
+              </div> <!-- cd-timeline-block -->
+
+              <div class="cd-timeline-block" data-sal-duration="700" data-sal="zoom-in" data-sal-delay="0"
+                data-sal-easing="ease-out-bounce">
+                <div class="cd-timeline-img cd-movie" style="display: none;">
+                </div> <!-- cd-timeline-img -->
+
+                <div data-sal-duration="700" data-sal="slide-right" data-sal-delay="0" data-sal-easing="ease-out-bounce"
+                  class="cd-timeline-content" data-sal-duration="700" data-sal="zoom-in" data-sal-delay="0"
+                  data-sal-easing="ease-out-bounce">
+                  <h2 class="skillsHeading" aria-level="4">Adobe Premier Pro</h2>
+                </div> <!-- cd-timeline-content -->
+              </div> <!-- cd-timeline-block -->
+
+              <!-- SOFTWARE DEVELOPMENT -->
+              <div class="cd-timeline-block" data-sal-duration="700" data-sal="zoom-in" data-sal-delay="0"
+                data-sal-easing="ease-out-bounce">
+                <div class="cd-timeline-img cd-time">
+                  <img class="skillsImg" src="./images/webdesign.svg" alt="" loading="lazy">
+                </div>
+                <h2 class="skillsCategory" aria-level="3" style="color:white; padding-left:10%; padding-top: 1%; margin-left: 85px;">Software Development</h2>
+                <!-- cd-timeline-img -->
+              </div>
+              <br>
+              <br>
+              <br>
+              <div data-sal-duration="700" data-sal="slide-right" data-sal-delay="0" data-sal-easing="ease-out-bounce"
+                class="cd-timeline-content">
+                <h2 class="skillsHeading" aria-level="4">C/C++</h2>
+              </div> <!-- cd-timeline-content -->
+              </div> <!-- cd-timeline-block -->
+
+              <div class="cd-timeline-block" data-sal-duration="700" data-sal="zoom-in" data-sal-delay="0"
+                data-sal-easing="ease-out-bounce">
+                <div class="cd-timeline-img cd-movie" style="display: none;">
+                </div> <!-- cd-timeline-img -->
+
+                <div data-sal-duration="700" data-sal="slide-left" data-sal-delay="0" data-sal-easing="ease-out-bounce"
+                  class="cd-timeline-content" data-sal-duration="700" data-sal="zoom-in" data-sal-delay="0"
+                  data-sal-easing="ease-out-bounce">
+                  <h2 class="skillsHeading" aria-level="4">Python</h2>
+                </div> <!-- cd-timeline-content -->
+              </div> <!-- cd-timeline-block -->
+
+              <div class="cd-timeline-block" data-sal-duration="700" data-sal="zoom-in" data-sal-delay="0"
+                data-sal-easing="ease-out-bounce">
+                <div class="cd-timeline-img cd-movie" style="display: none; ">
+                </div> <!-- cd-timeline-img -->
+
+                <div data-sal-duration="700" data-sal="slide-right" data-sal-delay="0" data-sal-easing="ease-out-bounce"
+                  class="cd-timeline-content" data-sal-duration="700" data-sal="zoom-in" data-sal-delay="0"
+                  data-sal-easing="ease-out-bounce">
+                  <h2 class="skillsHeading" aria-level="4">Java</h2>
+                </div> <!-- cd-timeline-content -->
+              </div> <!-- cd-timeline-block -->
+
+              <div class="cd-timeline-block" data-sal-duration="700" data-sal="zoom-in" data-sal-delay="0"
+                data-sal-easing="ease-out-bounce">
+                <div class="cd-timeline-img cd-movie" style="display: none; ">
+                </div> <!-- cd-timeline-img -->
+
+                <div data-sal-duration="700" data-sal="slide-left" data-sal-delay="0" data-sal-easing="ease-out-bounce"
+                  class="cd-timeline-content" data-sal-duration="700" data-sal="zoom-in" data-sal-delay="0"
+                  data-sal-easing="ease-out-bounce">
+                  <h2 class="skillsHeading" aria-level="4">C#</h2>
+                </div> <!-- cd-timeline-content -->
+              </div> <!-- cd-timeline-block -->
+
+
+            </section> <!-- cd-timeline -->
+            <!-- -->
+            </div>
+        </section>
+        <section class="section s3" id="teamsSection" aria-labelledby="teamsTitle">
+            <div id="teams">
+            <h2 id="teamsTitle" class="sectionTitle">Our Team</h2>
+            <div class="container">
+              <div class="row">
+                <div id="abuSmall" class="col-4 col-sm-4 mt-5 teamMoreSmall">
+                  <p style="color: white; font-size: 18px;">Abdulrahman Almonajed</p>
+                  <p style="color: white; font-size: 18px;">Full-stack developer</p>
+                </div>
+                <div class="col-8 col-sm-8 col-md-6 mt-4 mt-sm-4 mt-md-0">
+                  <img class="topL img-responsive" id="slika1" src="./images/team-abdulrahman.webp" width="200" height="200" data-member="abu" alt="Abdulrahman Almonajed">
+                </div>
+                <div id="kisoSmall" class="col-4 col-sm-4 mt-5 teamMoreSmall">
+                  <p style="color: white; font-size: 18px;">Anes Karic</p>
+                  <p style="color: white; font-size: 18px;">Front-end developer</p>
+                </div>
+                <div class="col-8 col-sm-8 col-md-6 mt-4 mt-sm-4 mt-md-0">
+                  <img class="topR img-responsive" id="slika2" src="./images/team-anes.webp" width="200" height="200" data-member="kiso" alt="Anes Karic">
+                </div>
+              </div>
+              <div class="row center">
+                <div>
+                  <img class="centerImg img-responsive" id="slika" src="./images/team-obada.webp" width="100" height="300" data-member="combe" alt="Obada Almonajed"
+                    style="display: none; opacity: 0">
+                </div>
+                <div id="abu" class="offset-0 offset-sm-0 offset-md-3 col-6 col-sm-6 col-md-2 mt-5 teamMore" data-sal-duration="10"
+                  data-sal="fade-up" data-sal-delay="1000" data-sal-easing="ease-out-bounce">
+                  <p style="color: white; font-size: 18px;">Abdulrahman Almonajed</p>
+                  <p style="color: white; font-size: 18px;">Full-stack developer</p>
+                </div>
+                <div id="kiso" class="offset-0 offset-sm-0 offset-md-3 col-6 col-sm-6 col-md-2 mt-5 teamMore" data-sal-duration="10"
+                  data-sal="fade-up" data-sal-delay="1000" data-sal-easing="ease-out-bounce">
+                  <p style="color: white; font-size: 18px;">Anes Karic</p>
+                  <p style="color: white; font-size: 18px;">Front-end developer</p>
+                </div>
+                <div id="combe" class="offset-0 offset-sm-0 offset-md-3 col-6 col-sm-6 col-md-2 mt-5 active teamMore"
+                  data-sal-duration="10" data-sal="fade-up" data-sal-delay="1000" data-sal-easing="ease-out-bounce">
+                  <p style="color: white; font-size: 18px;">Obada Almonajed</p>
+                  <p style="color: white; font-size: 18px;">Founder</p>
+                </div>
+                <div id="aldin" class="offset-0 offset-sm-0 offset-md-3 col-6 col-sm-6 col-md-2 mt-5 teamMore"
+                  data-sal-duration="10" data-sal="fade-up" data-sal-delay="1000" data-sal-easing="ease-out-bounce">
+                  <p style="color: white; font-size: 18px;">Aldin Becic</p>
+                  <p style="color: white; font-size: 18px;">Back-end developer</p>
+                </div>
+                <div id="dizda" class="offset-0 offset-sm-0 offset-md-3 col-6 col-sm-6 col-md-2 mt-5 teamMore"
+                  data-sal-duration="10" data-sal="fade-up" data-sal-delay="1000" data-sal-easing="ease-out-bounce">
+                  <p style="color: white; font-size: 18px;">Tarik Dizdar</p>
+                  <p style="color: white; font-size: 18px;">Manager</p>
+                </div>
+                <div id="muha" class="offset-0 offset-sm-0 offset-md-3 col-6 col-sm-6 col-md-2 mt-5 teamMore" data-sal-duration="10"
+                  data-sal="fade-up" data-sal-delay="1000" data-sal-easing="ease-out-bounce">
+                  <p style="color: white; font-size: 18px;">Muhamed Hasanspahic</p>
+                  <p style="color: white; font-size: 18px;">Front-end developer</p>
+                </div>
+                <div id="combeSmall" class="col-4 col-sm-4 mt-5 teamMoreSmall">
+                  <p style="color: white; font-size: 18px;">Obada Almonajed</p>
+                  <p style="color: white; font-size: 18px;">Founder</p>
+                </div>
+                <div class="col-8 col-sm-8 col-md-4 mt-4 mt-sm-4 mt-md-0 mb-0 mb-sm-0 mb-md-2">
+                  <img class="centerImg img-responsive" id="slika3" src="./images/team-obada.webp" width="300" height="300" data-member="combe" alt="Obada Almonajed">
+                </div>
+              </div>
+              <div class="row">
+                <div id="aldinSmall" class="col-4 col-sm-4 mt-5 teamMoreSmall">
+                  <p style="color: white; font-size: 18px;">Aldin Becic</p>
+                  <p style="color: white; font-size: 18px;">Back-end developer</p>
+                </div>
+                <div class="col-8 col-sm-8 col-md-4 mt-4 mt-sm-4 mt-md-0">
+                  <img class="bottomL img-responsive" id="slika4" src="./images/team-aldin.webp" width="200" height="200" data-member="aldin" alt="Aldin Becic">
+                </div>
+                <div id="dizdaSmall" class="col-4 col-sm-4 mt-5 teamMoreSmall">
+                  <p style="color: white; font-size: 18px;">Tarik Dizdar</p>
+                  <p style="color: white; font-size: 18px;">Manager</p>
+                </div>
+                <div class="col-8 col-sm-8 col-md-4 mt-4 mt-sm-4 mt-md-0">
+                  <img class="bottomC img-responsive" id="slika5" src="./images/team-tarik.webp" width="200" height="200"
+                    data-member="dizda" alt="Tarik Dizdar">
+                </div>
+                <div id="muhaSmall" class="col-4 col-sm-4 mt-5 teamMoreSmall">
+                  <p style="color: white; font-size: 18px;">Muhaned Hasanspahic</p>
+                  <p style="color: white; font-size: 18px;">Front-end developer</p>
+                </div>
+                <div class="col-8 col-sm-8 col-md-4 mt-4 mt-sm-4 mt-md-0">
+                  <img class="bottomR img-responsive" id="slika6" src="./images/team-muha.webp" width="200" height="200"
+                    data-member="muha" alt="Muhaned Hasanspahic">
+                </div>
+              </div>
+            </div>
+            </div>
+        </section>
+        <section class="section s4" id="projectsSection" aria-labelledby="projectsTitle">
+            <div id="project">
+            <h2 id="projectsTitle" class="visually-hidden">Our Projects</h2>
+            <div class="page-bg"></div>
+
+            <div class="animation-wrapper">
+                <div class="particle particle-1"></div>
+                <div class="particle particle-2"></div>
+                <div class="particle particle-3"></div>
+                <div class="particle particle-4"></div>
+                <!-- 
+                <div class="particle particle-5"></div> -->
+            </div>
+
+            <div class="cards">
+                <div class="card">
+                    <img class="card__image" loading="lazy" width="250" height="150" src="images/project-ab3d-akademija.webp" alt="AB3D Akademija" />
+                    <div class="card-title">
+                        <a href="#" class="toggle-info btn" tabindex="-1" aria-hidden="true">
+                            <span class="left"></span>
+                            <span class="right"></span>
+                        </a>
+                        <h4 class="clientFont" aria-level="3">
+                            AB3D Akademija
+                            </h4>
+                    </div>
+                    <div class="card-flap flap1">
+                        <div class="card-description">
+                            Opis firme
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img class="card__image" loading="lazy" width="250" height="150" src="images/project-btt.webp" alt="BTT" />
+                    <div class="card-title">
+                        <a href="#" class="toggle-info btn" tabindex="-1" aria-hidden="true">
+                            <span class="left"></span>
+                            <span class="right"></span>
+                        </a>
+                        <h4 class="clientFont" aria-level="3">
+                            Balkan Tourist Travel
+                            </h4>
+                    </div>
+                    <div class="card-flap flap1">
+                        <div class="card-description">
+                            Opis firme
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img class="card__image" loading="lazy" width="250" height="150" src="images/project-moje-naocale.webp" alt="Moje naocale" />
+                    <div class="card-title">
+                        <a href="#" class="toggle-info btn" tabindex="-1" aria-hidden="true">
+                            <span class="left"></span>
+                            <span class="right"></span>
+                        </a>
+                        <h4 class="clientFont" aria-level="3">
+                            Moje naocale
+                            </h4>
+                    </div>
+                    <div class="card-flap flap1">
+                        <div class="card-description">
+                            Opis firme
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img class="card__image" loading="lazy" width="250" height="150" src="images/project-suessa.webp" alt="Suessa" />
+                    <div class="card-title">
+                        <a href="#" class="toggle-info btn" tabindex="-1" aria-hidden="true">
+                            <span class="left"></span>
+                            <span class="right"></span>
+                        </a>
+                        <h4 class="clientFont" aria-level="3">
+                            Suessa
+                            </h4>
+                    </div>
+                    <div class="card-flap flap1">
+                        <div class="card-description">
+                            Opis firme
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img class="card__image" loading="lazy" width="250" height="150" src="images/project-wasdra.webp" alt="Wasdra" />
+                    <div class="card-title">
+                        <a href="#" class="toggle-info btn" tabindex="-1" aria-hidden="true">
+                            <span class="left"></span>
+                            <span class="right"></span>
+                        </a>
+                        <h4 class="clientFont" aria-level="3">
+                            Wasdra
+                            </h4>
+                    </div>
+                    <div class="card-flap flap1">
+                        <div class="card-description">
+                            Opis firme
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img class="card__image" loading="lazy" width="250" height="150" src="images/project-wool-carpet.webp" alt="Wool Carpet" />
+                    <div class="card-title">
+                        <a href="#" class="toggle-info btn" tabindex="-1" aria-hidden="true">
+                            <span class="left"></span>
+                            <span class="right"></span>
+                        </a>
+                        <h4 class="clientFont" aria-level="3">
+                            Wool Carpet
+                            </h4>
+                    </div>
+                    <div class="card-flap flap1">
+                        <div class="card-description">
+                            Opis firme
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img class="card__image" loading="lazy" width="250" height="150" src="images/project-al-amel.webp" alt="Al Amel school" />
+                    <div class="card-title">
+                        <a href="#" class="toggle-info btn" tabindex="-1" aria-hidden="true">
+                            <span class="left"></span>
+                            <span class="right"></span>
+                        </a>
+                        <h4 class="clientFont" aria-level="3">
+                            Al-amel school
+                        </h4>
+                    </div>
+                    <div class="card-flap flap1">
+                        <div class="card-description">
+                            Opis firme
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            </div>
+        </section>
+        <section class="section s5" id="contactSection" aria-labelledby="contactTitle">
+            <div id="contact">
+            <h2 id="contactTitle" class="visually-hidden">Contact us</h2>
+            <section class="contact">
+                <div class="socialMedia">
+                    <div class="socialItem">
+                        <a class="socialMediaBtn" href="#" aria-label="Facebook">
+                            <i class="fab fa-facebook-f" aria-hidden="true"></i>
+                        </a>
+                        <p class="socialLabel">facebook.com link</p>
+                    </div>
+                    <div class="socialItem">
+                        <a class="socialMediaBtn" href="#" aria-label="Instagram">
+                            <i class="fab fa-instagram" aria-hidden="true"></i>
+                        </a>
+                        <p class="socialLabel">instagram.com link</p>
+                    </div>
+                    <div class="socialItem">
+                        <a class="socialMediaBtn" href="tel:+387603415908" aria-label="Phone">
+                            <i class="fas fa-phone" aria-hidden="true"></i>
+                        </a>
+                        <p class="socialLabel"><a href="tel:+387603415908">(+387)60-341-5908</a></p>
+                    </div>
+                </div>
+            </section>
+
+            <div class="sendEmailContainer">
+
+                <div class="envbg"></div>
+                <div class="envelope">
+                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/153207/EmailBody.png" alt="" />
+                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/153207/EmailHead.png" alt="" class="lid" />
+                </div>
+
+                <div class="finished" role="status" aria-live="polite">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="448.8" height="448.8" viewBox="0 0 448.8 448.8">
+                        <path d="M142.8 323.85L35.7 216.75 0 252.45l142.8 142.8 306-306-35.7-35.7" /></svg>
+                    <h3>Email Sent</h3>
+                    <span class="resetButton" role="button" tabindex="0">Send Another Email</span>
+                </div>
+
+
+                <div class="emailBody">
+                    <div class="topBar">
+                        <div class="macBtns">
+                            <div class="btn close"></div>
+                            <div class="btn min"></div>
+                            <div class="btn full"></div>
+                        </div>
+                        <span>New Message</span>
+                    </div>
+
+                    <form id="contactForm" novalidate>
+                        <div class="emailInfo">
+
+                            <div class="infoLine">
+                                <div class="infoInput">
+                                    <label for="ourEmail">To :</label>
+                                    <input type="text" disabled="disabled" id="ourEmail" name="ourEmail" class="active"
+                                        value="info@aboc.com">
+                                </div>
+
+                                <input type="submit" id="send" value="Send">
+                            </div>
+
+                            <div class="infoLine">
+                                <div class="infoInput">
+                                    <label for="fromEmail">From :</label>
+                                    <input type="email" id="fromEmail" name="fromEmail" autocomplete="email" required placeholder="What's your email address?">
+                                </div>
+                            </div>
+
+                            <div class="infoLine">
+                                <div class="infoInput">
+                                    <label for="fromName">Name :</label>
+                                    <input type="text" id="fromName" name="fromName" autocomplete="name" required placeholder="What's your name?">
+                                </div>
+                            </div>
+
+                            <div class="infoLine">
+                                <div class="infoInput">
+                                    <label for="fromSubject">Subject :</label>
+                                    <input type="text" id="fromSubject" name="fromSubject" required
+                                        placeholder="What is it you want to talk about?">
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <label for="mainMessage" class="visually-hidden">Message</label>
+                        <textarea id="mainMessage" required name="mainMessage" placeholder="Type your message here..."></textarea>
+
+                    </form>
+
+                </div>
+
+
+
+            </div>
+            </div>
+        </section>
+    </main>
 
     <script src="js/loading.js"></script>
 
@@ -210,6 +866,16 @@
     <script src="https://unpkg.com/splitting@1.0.6/dist/splitting.min.js"
         integrity="sha384-taxnKSnzdVS5gZB4jZcieFZlmBPQMFqhdEmCScZsrIFCxX8Zizq4fKJJH5kBwMXT" crossorigin="anonymous"></script>
     <script src="js/toastr.js"></script>
+    <script src="./node_modules/sal.js/dist/sal.js"></script>
+    <script>
+        sal({
+            threshold: 1,
+            once: false,
+        });
+    </script>
+    <script src="js/swapImage.js"></script>
+    <script src="js/project.js"></script>
+    <script src="js/sendEmail.js"></script>
 
 </body>
 

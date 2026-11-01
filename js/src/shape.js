@@ -242,11 +242,6 @@ $(document).ready(function () {
     var introDone = false;
     var timers = [];
 
-    // sekcije se ucitavaju odmah (u paraleli), ne cekaju kraj intra
-    $('#skills').load('./views/skills.html');
-    $('#teams').load('./views/teams.html');
-    $('#project').load('./views/project.html');
-
     function finishIntro() {
         if (introDone) return;
         introDone = true;

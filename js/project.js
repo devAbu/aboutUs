@@ -1,6 +1,15 @@
 $(document).ready(function () {
     var zindex = 10;
 
+    // kartice su dostupne tastaturom
+    $('.card').attr({ tabindex: 0, role: 'button', 'aria-expanded': 'false' })
+        .on('keydown', function (e) {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                $(this).trigger('click');
+            }
+        });
+
 
     $('.card').click(function (e) {
         e.preventDefault()
@@ -45,5 +54,9 @@ $(document).ready(function () {
             zindex++;
         }
 
+
+        $('.card').each(function () {
+            $(this).attr('aria-expanded', $(this).hasClass('show') ? 'true' : 'false');
+        });
     });
 });

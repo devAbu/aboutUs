@@ -4141,17 +4141,17 @@ body {
     transition: 0.2s linear;
 }
 @media screen and (min-width: 360px) {
-    .socialMedia h4 {
+    .socialMedia .socialLabel {
         font-size: 20px !important;
     }
 }
 @media screen and (min-width: 864px) {
-    .socialMedia h4 {
+    .socialMedia .socialLabel {
         font-size: 18px !important;
     }
 }
 @media screen and (min-width: 690px) {
-    .socialMedia h4 {
+    .socialMedia .socialLabel {
         font-size: 20px !important;
     }
 }
@@ -4186,7 +4186,7 @@ body {
         left: -10%;
     }
 }
-.socialMedia h4{
+.socialMedia .socialLabel{
     display: inline-block;
     position: relative;
     top: -44px;
@@ -4211,7 +4211,7 @@ body {
            line-height: 50px
        }
 
-       .socialMedia h4{
+       .socialMedia .socialLabel{
            top: -24px
        }
 
@@ -4373,7 +4373,7 @@ body {
     gap: 10px;
 }
 
-.socialMedia h4 {
+.socialMedia .socialLabel {
     position: static;
     top: auto;
     margin: 0;
@@ -4609,4 +4609,64 @@ body {
         bottom: 72px;
         font-size: 24px;
     }
+}
+
+
+/* ---------- Pristupacnost ---------- */
+.visually-hidden {
+    position: absolute !important;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+.socialMedia .socialLabel {
+    margin: 0;
+    color: #1f6fa8;
+    font-weight: bold;
+}
+
+.socialMedia .socialLabel a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.socialMedia .socialLabel a:hover,
+.socialMedia .socialLabel a:focus-visible {
+    text-decoration: underline;
+}
+
+.socialMediaBtn {
+    color: #1f6fa8;
+}
+
+.socialMediaBtn:focus-visible,
+.resetButton:focus-visible,
+.card:focus-visible,
+.skip-intro:focus-visible,
+.scrollDown:focus-visible {
+    outline: 3px solid #4da3ff;
+    outline-offset: 3px;
+}
+
+.emailBody .emailInfo .infoLine input:focus-visible,
+.emailBody #mainMessage:focus-visible {
+    outline: 2px solid #0366c8;
+    outline-offset: -2px;
+}
+
+.emailBody .emailInfo .infoLine input#send {
+    border-color: #0366c8;
+    color: #0366c8;
+}
+
+.emailBody .emailInfo .infoLine input#send:hover,
+.emailBody .emailInfo .infoLine input#send:focus-visible {
+    background-color: #0366c8;
+    color: #fff;
 }

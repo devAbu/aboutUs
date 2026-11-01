@@ -101,6 +101,17 @@ window.onload = function () {
     });
 
     resetButton.addEventListener("click", reset);
+    resetButton.addEventListener("keydown", function (e) {
+        if (e.key === "Enter" || e.key === " ") {
+            e.preventDefault();
+            reset();
+        }
+    });
+
+    // Enter u polju salje formu preko dugmeta Send (bez reloada stranice)
+    document.getElementById("contactForm").addEventListener("submit", function (e) {
+        e.preventDefault();
+    });
 
 
 }
