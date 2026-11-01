@@ -55,4 +55,20 @@
     } else {
         setActive('homeSection');
     }
+
+    // kartice vjestina: otkrivanje pri ulasku u vidno polje (radi i nakon skoka na sekciju)
+    var cards = Array.prototype.slice.call(document.querySelectorAll('.skillCard[data-reveal]'));
+    var skills = document.querySelector('.skills');
+    if (skills && 'IntersectionObserver' in window && !reduceMotion) {
+        skills.classList.add('reveal-ready');
+        var revealIo = new IntersectionObserver(function (entries) {
+            entries.forEach(function (e) {
+                if (e.isIntersecting) {
+                    e.target.classList.add('is-visible');
+                    revealIo.unobserve(e.target);
+                }
+            });
+        }, { root: root, threshold: 0.12 });
+        cards.forEach(function (c) { revealIo.observe(c); });
+    }
 })();
