@@ -253,9 +253,9 @@ $(document).ready(function () {
         timers.forEach(clearTimeout);
         $('canvas').not('div.container > canvas').remove();
         $('.welcome').remove();
-        $('body').append('<script src="js/fullPage.js"></script>');
         $('#home').load('./views/home.html');
-        $('#fullPage').removeClass('hidden');
+        $('#fullPage, #section-nav').removeClass('hidden');
+        $('body').append('<script src="js/snap.js"></script>');
     }
 
     timers.push(setTimeout(function () {
