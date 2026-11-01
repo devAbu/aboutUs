@@ -73,7 +73,7 @@ body {
 
 
 .s5 {
-    background-color: white !important
+    background: linear-gradient(to bottom, #0b1b33, #0f0c29);
 }
 
 /* span#typed {
@@ -127,472 +127,10 @@ body {
 }
 
 
-/* SEND EMAIL */
 html,
 body {
     position: relative !important;
     overflow-x: hidden !important;
-}
-
-.envbg {
-    background-color: #035caf;
-    z-index: 0 !important;
-}
-
-.envbg.show {
-    opacity: 1 !important;
-}
-
-.envbg.hide {
-    display: none;
-}
-
-.envelope,
-.envbg {
-    width: 100%;
-    max-width: 900px;
-    min-width: 900px;
-    position: absolute;
-    top: 50%;
-    height: 460px;
-    transform: translate(0%, -50%) scale(0.3);
-    overflow: hidden;
-    z-index: 2;
-    will-change: transform;
-    transition: transform 3s ease;
-    opacity: 0;
-}
-
-.envelope.show,
-.envbg.show {
-    opacity: 1;
-}
-
-.envelope.done,
-.envbg.done {
-    transition: opacity 1s ease;
-}
-
-.envelope.done img.lid,
-.envbg.done img.lid {
-    transform: translate(-50%, 0%);
-}
-
-.envelope.move,
-.envbg.move {
-    animation: sendEnvelope 0.5s ease-in forwards 5s;
-}
-
-.envelope:after,
-.envbg:after {
-    content: "";
-    position: absolute;
-    z-index: 0 !important;
-    bottom: 0px;
-    left: 0;
-    width: 100%;
-    height: 30px;
-    background-color: #0484FA;
-}
-
-@media screen and (min-width: 500px) {
-
-    .envelope,
-    .envbg {
-        width: 90%;
-    }
-}
-
-.envelope img,
-.envbg img {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transition: transform 0.5s ease;
-    z-index: 10;
-    height: 100%;
-    transform: translate(-50%, 0%);
-}
-
-.envelope img.lid,
-.envbg img.lid {
-    will-change: transform;
-    transform: translate(-50%, -100%);
-}
-
-.envelope img.lid.move,
-.envbg img.lid.move {
-    animation: moveLid 2s ease-in-out forwards 2.5s;
-}
-
-.finished {
-    transform: scale(0.35) translateY(20%);
-    position: absolute;
-    z-index: 2;
-    opacity: 0;
-    transition: opacity 1s ease;
-    text-align: center;
-}
-
-@media screen and (max-width: 617px) {
-    .finished {
-        width: 900px;
-    }
-}
-
-.finished.show {
-    opacity: 1;
-}
-
-.finished svg {
-    transition: transform 0.5s ease;
-    transform: translate(78%, 10%) rotate(-15deg);
-    fill: #5be85b;
-}
-
-@media screen and (max-width: 380px) {
-    .finished svg {
-        transform: translate(60%, 10%) rotate(-15deg);
-    }
-}
-
-.finished h1 {
-    text-align: center;
-    font-size: 92px;
-    margin: 50px 0;
-    font-weight: 400;
-}
-
-.finished span {
-    text-align: center;
-    font-size: 52px;
-    border: 5px solid #0484FA;
-    padding: 5px 60px;
-    color: #0484FA;
-    letter-spacing: 0.5px;
-    border-radius: 20px;
-    transition: 0.2s ease;
-}
-
-@media screen and (max-width: 617px) {
-    .finished span {
-        font-size: 42px;
-    }
-}
-
-.finished span:hover {
-    background-color: #0484FA;
-    color: white;
-    cursor: pointer;
-}
-
-.sendEmailContainer {
-    width: 100%;
-    height: 80vh;
-    overflow: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 2%
-}
-
-.emailBody {
-    width: 100%;
-    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.5);
-    border-radius: 10px;
-    max-width: 900px;
-    min-width: 320px;
-    transition: width 0.3s ease, min-width 0.3s ease, transform 0.5s ease-in-out;
-    position: relative;
-    will-change: transform;
-    transform: scale(1) translate(0, 0%);
-    z-index: 3;
-}
-
-.emailBody.hide {
-    display: none;
-}
-
-.emailBody.move {
-    animation: shrinkEmail 3s ease-in-out forwards;
-}
-
-@media screen and (min-width: 500px) {
-    .emailBody {
-        width: 80%;
-    }
-}
-
-.emailBody .topBar {
-    position: relative;
-    width: 100%;
-    background-color: #dedede;
-    border-top-right-radius: 10px;
-    border-top-left-radius: 10px;
-    text-align: center;
-    padding: 5px 0;
-}
-
-.emailBody .topBar .macBtns {
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: flex;
-    height: 100%;
-    align-items: center;
-}
-
-.emailBody .topBar .macBtns .btn {
-    padding: 7px;
-    border-radius: 50%;
-    margin-left: 10px;
-}
-
-.emailBody .topBar .macBtns .btn.close {
-    background-color: red;
-}
-
-.emailBody .topBar .macBtns .btn.min {
-    background-color: orange;
-}
-
-.emailBody .topBar .macBtns .btn.full {
-    background-color: #5be85b;
-}
-
-.emailBody .topBar span {
-    color: #666;
-    font-weight: 300;
-    font-size: 14px;
-}
-
-.emailBody .emailInfo .infoLine {
-    width: 100%;
-    background-color: #f8f8f8;
-    border-bottom: 1px solid #e1e1e1;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 5px 0px;
-}
-
-.emailBody .emailInfo .infoLine .infoInput {
-    display: flex;
-    width: 100%;
-}
-
-.emailBody .emailInfo .infoLine .infoInput label {
-    text-align: right;
-    font-weight: normal;
-    display: block;
-    min-width: 65px;
-    font-weight: 300;
-    font-size: 14px;
-    color: #666;
-}
-
-.emailBody .emailInfo .infoLine .infoInput input {
-    width: 100%;
-    border: none;
-    outline: none;
-    background-color: transparent;
-    display: block;
-    margin-left: 10px;
-    webkit-apperance: none;
-    letter-spacing: 0.1px;
-    font-size: 12px;
-}
-
-.emailBody .emailInfo .infoLine .infoInput input.active {
-    width: 174px;
-    display: block;
-    color: white;
-    background-color: #0484FA;
-    padding: 0 10px;
-    border-radius: 10px;
-}
-
-.emailBody .emailInfo .infoLine input#send {
-    width: initial;
-    background-color: transparent;
-    border: 1px solid #0484FA;
-    color: #0484FA;
-    padding: 2px 20px;
-    margin: 0;
-    margin-right: 10px;
-    border-radius: 5px;
-    transition: 0.15s ease;
-}
-
-.emailBody .emailInfo .infoLine input#send:hover {
-    background-color: #0484FA;
-    color: white;
-    cursor: pointer;
-}
-
-.emailBody #mainMessage {
-    width: 100%;
-    border-bottom-right-radius: 15px;
-    border-bottom-left-radius: 15px;
-    resize: none;
-    margin: 0;
-    height: 300px;
-    border: 0;
-    padding: 20px;
-    font-size: 14px;
-    color: black;
-    outline: none;
-}
-
-@keyframes shrinkEmail {
-    0% {
-        transform: scale(1) translate(0, 0%);
-        z-index: 3;
-        min-width: 320px;
-    }
-
-    65% {
-        z-index: 3;
-    }
-
-    66% {
-        min-width: 900px;
-        transform: scale(0.29) translate(0, -120%);
-        z-index: 1;
-    }
-
-    100% {
-        min-width: 900px;
-        transform: scale(0.28) translate(0, 0%);
-        z-index: 0;
-    }
-}
-
-@keyframes moveLid {
-    0% {
-        transform: translate(-50%, -100%);
-    }
-
-    100% {
-        transform: translate(-50%, 0%);
-    }
-}
-
-@keyframes sendEnvelope {
-    0% {
-        transform: translate(0%, -50%) scale(0.3);
-        opacity: 1;
-        z-index: 5;
-    }
-
-    100% {
-        transform: translate(100%, -50%) scale(0.3);
-        opacity: 0;
-    }
-}
-
-
-.socialMedia{
-    top: 50%;
-    width: 100%;
-    text-align: center;
-}
-.socialMediaBtn{
-    display: inline-block;
-    width: 90px;
-    height: 90px;
-    background: #f1f1f1;
-    margin: 10px;
-    border-radius: 30%;
-    box-shadow: 0 5px 15px -5px #00000070;
-    color: #3498db;
-    overflow: hidden;
-    position: relative;
-}
-
-.socialMediaBtn i{
-    line-height: 90px;
-    font-size: 26px;
-    transition: 0.2s linear;
-}
-@media screen and (min-width: 360px) {
-    .socialMedia .socialLabel {
-        font-size: 20px !important;
-    }
-}
-@media screen and (min-width: 864px) {
-    .socialMedia .socialLabel {
-        font-size: 18px !important;
-    }
-}
-@media screen and (min-width: 690px) {
-    .socialMedia .socialLabel {
-        font-size: 20px !important;
-    }
-}
-.socialMediaBtn:hover i{
-    transform: scale(1.3);
-    color: #f1f1f1;
-}
-.socialMediaBtn::before{
-    content: "";
-    position: absolute;
-    width: 120%;
-    height: 120%;
-    background: #3498db;
-    transform: rotate(45deg);
-    left: -110%; 
-    top: 90%;
-}
-.socialMediaBtn:hover::before{
-    animation: aaa 0.7s 1;
-    top: -10%;
-    left: -10%;
-}
-@keyframes aaa{
-    0%{
-        left: -110%;
-        top: 90%;
-    }50%{
-        left: 10%;
-        top: -30%;
-    }100%{
-        top: -10%;
-        left: -10%;
-    }
-}
-.socialMedia .socialLabel{
-    display: inline-block;
-    position: relative;
-    top: -44px;
-    color: #3498db;
-}
-
-@media screen and (max-width: 617px) {
-        .contact{
-        margin: 8px;
-        max-width: 300px;
-        perspective: 1000;
-        position: relative;
-        z-index: 1; 
-       }
-
-       .socialMediaBtn{
-           height: 45px;
-           width: 45px
-       }
-
-       .socialMediaBtn i{
-           line-height: 50px
-       }
-
-       .socialMedia .socialLabel{
-           top: -24px
-       }
-
-       .s5{
-           z-index: 999 !important
-       }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -722,76 +260,6 @@ body {
 }
 
 /* ---------- Responsive ---------- */
-
-/* kontakt */
-#fullPage .s5 .contact {
-    max-width: none;
-    margin: 0;
-    padding: 16px 16px 0;
-}
-
-.socialMedia {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    gap: 0 28px;
-    top: auto;
-}
-
-.socialItem {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.socialMedia .socialLabel {
-    position: static;
-    top: auto;
-    margin: 0;
-    font-size: clamp(14px, 2.2vw, 20px) !important;
-}
-
-.socialMediaBtn {
-    flex: none;
-    margin: 10px 0;
-}
-
-.sendEmailContainer {
-    height: auto;
-    margin-top: 0;
-    padding: 0 16px 16px;
-    overflow: hidden;
-    position: relative;
-}
-
-.emailBody {
-    min-width: 0;
-}
-
-.emailBody .emailInfo .infoLine .infoInput,
-.emailBody .emailInfo .infoLine .infoInput input {
-    min-width: 0;
-}
-
-.emailBody .emailInfo .infoLine .infoInput input.active {
-    width: auto;
-    flex: 1;
-    max-width: 174px;
-}
-
-.emailBody #mainMessage {
-    height: clamp(120px, 28vh, 300px);
-    height: clamp(120px, 28dvh, 300px);
-}
-
-.envelope,
-.envbg {
-    min-width: 0;
-    width: 100%;
-    height: auto;
-    aspect-ratio: 900 / 460;
-}
 
 /* navigacija sekcija na malim ekranima: kompaktna traka na dnu */
 @media (max-width: 767px) {
@@ -944,49 +412,10 @@ body {
     border: 0;
 }
 
-.socialMedia .socialLabel {
-    margin: 0;
-    color: #1f6fa8;
-    font-weight: bold;
-}
-
-.socialMedia .socialLabel a {
-    color: inherit;
-    text-decoration: none;
-}
-
-.socialMedia .socialLabel a:hover,
-.socialMedia .socialLabel a:focus-visible {
-    text-decoration: underline;
-}
-
-.socialMediaBtn {
-    color: #1f6fa8;
-}
-
-.socialMediaBtn:focus-visible,
-.resetButton:focus-visible,
 .skip-intro:focus-visible,
 .scrollDown:focus-visible {
     outline: 3px solid #4da3ff;
     outline-offset: 3px;
-}
-
-.emailBody .emailInfo .infoLine input:focus-visible,
-.emailBody #mainMessage:focus-visible {
-    outline: 2px solid #0366c8;
-    outline-offset: -2px;
-}
-
-.emailBody .emailInfo .infoLine input#send {
-    border-color: #0366c8;
-    color: #0366c8;
-}
-
-.emailBody .emailInfo .infoLine input#send:hover,
-.emailBody .emailInfo .infoLine input#send:focus-visible {
-    background-color: #0366c8;
-    color: #fff;
 }
 
 /* ---------- Klase umjesto inline stilova ---------- */
@@ -1606,5 +1035,265 @@ body {
 @media (max-width: 359px) {
     .projectCard {
         flex-basis: 100%;
+    }
+}
+
+/* ---------- Contact ---------- */
+#fullPage .s5 {
+    padding: 64px 0 0;
+}
+
+#fullPage .contact {
+    width: min(1000px, 92vw);
+    margin: 0 auto;
+}
+
+.contactGrid {
+    display: grid;
+    grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+    gap: 32px;
+    align-items: start;
+}
+
+.contactList {
+    display: grid;
+    gap: 14px;
+    margin: 0 0 20px;
+    padding: 0;
+    list-style: none;
+}
+
+.contactItem {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 16px 18px;
+    border: 1px solid rgba(127, 212, 255, 0.18);
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.06);
+    color: #fff;
+    text-decoration: none;
+    transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+.contactItem:hover,
+.contactItem:focus-visible {
+    border-color: rgba(127, 212, 255, 0.5);
+    color: #fff;
+    text-decoration: none;
+    transform: translateY(-2px);
+}
+
+.contactItem:focus-visible {
+    outline: 3px solid #7fd4ff;
+    outline-offset: 3px;
+}
+
+.contactIcon {
+    display: grid;
+    flex: none;
+    place-items: center;
+    width: 46px;
+    height: 46px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #0873b8, #4353ff);
+    font-size: 18px;
+}
+
+.contactText {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.contactLabel {
+    color: #7fd4ff;
+    font: 600 12px/1.2 "Open Sans", sans-serif;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.contactValue {
+    font: 700 clamp(16px, 1.4vw, 19px)/1.3 "Open Sans", sans-serif;
+}
+
+.contactNote {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.72);
+    font: 400 15px/1.6 "Open Sans", sans-serif;
+}
+
+.contactCard {
+    padding: 24px;
+    border: 1px solid rgba(127, 212, 255, 0.18);
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.06);
+    -webkit-backdrop-filter: blur(6px);
+    backdrop-filter: blur(6px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+.contactForm[hidden],
+.formSuccess[hidden] {
+    display: none;
+}
+
+.field {
+    margin-bottom: 14px;
+}
+
+.field label {
+    display: block;
+    margin-bottom: 6px;
+    color: rgba(255, 255, 255, 0.85);
+    font: 600 14px/1.2 "Open Sans", sans-serif;
+}
+
+.field input,
+.field textarea {
+    display: block;
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    background: rgba(7, 24, 40, 0.6);
+    color: #fff;
+    font: 400 16px/1.4 "Open Sans", sans-serif;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.field textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.field input::placeholder,
+.field textarea::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.field input:focus,
+.field textarea:focus {
+    border-color: #7fd4ff;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(127, 212, 255, 0.3);
+}
+
+.field [aria-invalid="true"] {
+    border-color: #ff8a8a;
+}
+
+.fieldError {
+    min-height: 0;
+    margin: 6px 0 0;
+    color: #ff9c9c;
+    font: 400 13px/1.3 "Open Sans", sans-serif;
+}
+
+.fieldError:empty {
+    display: none;
+}
+
+.contactForm .btnHero {
+    width: 100%;
+    margin-top: 6px;
+    border: 0;
+    cursor: pointer;
+}
+
+.contactForm .btnHero:disabled {
+    cursor: progress;
+    opacity: 0.7;
+    transform: none;
+}
+
+.formStatus {
+    margin: 12px 0 0;
+    color: #fff;
+    font: 400 14px/1.4 "Open Sans", sans-serif;
+    text-align: center;
+}
+
+.formStatus:empty {
+    display: none;
+}
+
+.formStatus.is-error {
+    color: #ff9c9c;
+}
+
+.formSuccess {
+    padding: 24px 8px;
+    text-align: center;
+}
+
+.formSuccessIcon {
+    display: inline-grid;
+    place-items: center;
+    width: 64px;
+    height: 64px;
+    margin-bottom: 16px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #0873b8, #4353ff);
+    color: #fff;
+    font-size: 28px;
+}
+
+.formSuccess h3 {
+    margin: 0 0 8px;
+    color: #fff;
+    font: 700 24px/1.2 "Open Sans", sans-serif;
+}
+
+.formSuccess h3:focus {
+    outline: none;
+}
+
+.formSuccess p {
+    margin: 0 0 20px;
+    color: rgba(255, 255, 255, 0.8);
+    font: 400 16px/1.6 "Open Sans", sans-serif;
+}
+
+.formSuccess .btnHero {
+    border-width: 1.5px;
+    cursor: pointer;
+}
+
+.siteFooter {
+    margin-top: 40px;
+    padding: 18px 16px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.6);
+    font: 400 13px/1.4 "Open Sans", sans-serif;
+    text-align: center;
+}
+
+.siteFooter p {
+    margin: 0;
+}
+
+@media (max-width: 899px) {
+    .contactGrid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 20px;
+    }
+
+    .contactList {
+        margin-bottom: 14px;
+    }
+}
+
+@media (max-width: 767px) {
+    #fullPage .s5 {
+        padding: 48px 0 64px;
+    }
+
+    .contactCard {
+        padding: 18px;
+    }
+
+    .siteFooter {
+        margin-top: 28px;
     }
 }

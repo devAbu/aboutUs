@@ -84,7 +84,6 @@
     <link rel="stylesheet" href="css/laserCss.css">
 
 
-    <link rel="stylesheet" href="css/toastr.css">
 
 
 </head>
@@ -222,10 +221,10 @@
             </div>
             <div id="home"></div>
         </section>
-        <section class="section s2" id="skillsSection" aria-labelledby="sectionHeading">
+        <section class="section s2" id="skillsSection" aria-labelledby="skillsTitle">
             <div id="skills" class="skills">
                 <header class="sectionHead">
-                    <h2 id="sectionHeading" class="sectionHeading">Our Skills</h2>
+                    <h2 id="skillsTitle" class="sectionHeading">Our Skills</h2>
                     <p class="sectionIntro">The technologies and tools we use to turn your idea into a finished product.</p>
                 </header>
                 <div class="skillsGrid">
@@ -284,9 +283,6 @@
                         </ul>
                     </article>
                 </div>
-            </div>
-        </section> <!-- cd-timeline -->
-            <!-- -->
             </div>
         </section>
         <section class="section s3" id="teamsSection" aria-labelledby="teamsTitle">
@@ -394,109 +390,74 @@
             </div>
         </section>
         <section class="section s5" id="contactSection" aria-labelledby="contactTitle">
-            <div id="contact">
-            <h2 id="contactTitle" class="visually-hidden">Contact us</h2>
-            <section class="contact">
-                <div class="socialMedia">
-                    <div class="socialItem">
-                        <a class="socialMediaBtn" href="#" aria-label="Facebook">
-                            <i class="fab fa-facebook-f" aria-hidden="true"></i>
-                        </a>
-                        <p class="socialLabel">facebook.com link</p>
+            <div id="contact" class="contact">
+                <header class="sectionHead">
+                    <h2 id="contactTitle" class="sectionHeading">Contact us</h2>
+                    <p class="sectionIntro">Have a project in mind? Tell us about it and we will get back to you.</p>
+                </header>
+                <div class="contactGrid">
+                    <div class="contactInfo">
+                        <ul class="contactList">
+                            <li>
+                                <a class="contactItem" href="tel:+387603415908">
+                                    <span class="contactIcon" aria-hidden="true"><i class="fas fa-phone"></i></span>
+                                    <span class="contactText">
+                                        <span class="contactLabel">Phone</span>
+                                        <span class="contactValue">(+387) 60 341 5908</span>
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+                        <p class="contactNote">Prefer to write? Use the form and we will reply as soon as we can.</p>
                     </div>
-                    <div class="socialItem">
-                        <a class="socialMediaBtn" href="#" aria-label="Instagram">
-                            <i class="fab fa-instagram" aria-hidden="true"></i>
-                        </a>
-                        <p class="socialLabel">instagram.com link</p>
-                    </div>
-                    <div class="socialItem">
-                        <a class="socialMediaBtn" href="tel:+387603415908" aria-label="Phone">
-                            <i class="fas fa-phone" aria-hidden="true"></i>
-                        </a>
-                        <p class="socialLabel"><a href="tel:+387603415908">(+387)60-341-5908</a></p>
-                    </div>
-                </div>
-            </section>
 
-            <div class="sendEmailContainer">
+                    <div class="contactCard">
+                        <form id="contactForm" class="contactForm" novalidate>
+                            <div class="field">
+                                <label for="fromName">Name</label>
+                                <input type="text" id="fromName" name="fromName" autocomplete="name"
+                                    placeholder="Your name" aria-describedby="fromName-error" required>
+                                <p class="fieldError" id="fromName-error"></p>
+                            </div>
+                            <div class="field">
+                                <label for="fromEmail">Email</label>
+                                <input type="email" id="fromEmail" name="fromEmail" autocomplete="email"
+                                    placeholder="you@example.com" aria-describedby="fromEmail-error" required>
+                                <p class="fieldError" id="fromEmail-error"></p>
+                            </div>
+                            <div class="field">
+                                <label for="fromSubject">Subject</label>
+                                <input type="text" id="fromSubject" name="fromSubject"
+                                    placeholder="What is it about?" aria-describedby="fromSubject-error" required>
+                                <p class="fieldError" id="fromSubject-error"></p>
+                            </div>
+                            <div class="field">
+                                <label for="mainMessage">Message</label>
+                                <textarea id="mainMessage" name="mainMessage" rows="5"
+                                    placeholder="Tell us about your project..." aria-describedby="mainMessage-error"
+                                    required></textarea>
+                                <p class="fieldError" id="mainMessage-error"></p>
+                            </div>
+                            <div class="visually-hidden" aria-hidden="true">
+                                <label for="website">Leave this field empty</label>
+                                <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
+                            </div>
+                            <button type="submit" id="send" class="btnHero btnHero--primary">Send message</button>
+                            <p class="formStatus" id="formStatus" role="status" aria-live="polite"></p>
+                        </form>
 
-                <div class="envbg"></div>
-                <div class="envelope">
-                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/153207/EmailBody.png" alt="" />
-                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/153207/EmailHead.png" alt="" class="lid" />
-                </div>
-
-                <div class="finished" role="status" aria-live="polite">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="448.8" height="448.8" viewBox="0 0 448.8 448.8">
-                        <path d="M142.8 323.85L35.7 216.75 0 252.45l142.8 142.8 306-306-35.7-35.7" /></svg>
-                    <h3>Email Sent</h3>
-                    <span class="resetButton" role="button" tabindex="0">Send Another Email</span>
-                </div>
-
-
-                <div class="emailBody">
-                    <div class="topBar">
-                        <div class="macBtns">
-                            <div class="btn close"></div>
-                            <div class="btn min"></div>
-                            <div class="btn full"></div>
+                        <div class="formSuccess" id="formSuccess" hidden>
+                            <span class="formSuccessIcon" aria-hidden="true"><i class="fas fa-check"></i></span>
+                            <h3 tabindex="-1">Message sent</h3>
+                            <p>Thank you! We will get back to you as soon as possible.</p>
+                            <button type="button" id="sendAgain" class="btnHero btnHero--ghost">Send another message</button>
                         </div>
-                        <span>New Message</span>
                     </div>
-
-                    <form id="contactForm" novalidate>
-                        <div class="emailInfo">
-
-                            <div class="infoLine">
-                                <div class="infoInput">
-                                    <label for="ourEmail">To :</label>
-                                    <input type="text" disabled="disabled" id="ourEmail" name="ourEmail" class="active"
-                                        value="info@aboc.com">
-                                </div>
-
-                                <input type="submit" id="send" value="Send">
-                            </div>
-
-                            <div class="infoLine">
-                                <div class="infoInput">
-                                    <label for="fromEmail">From :</label>
-                                    <input type="email" id="fromEmail" name="fromEmail" autocomplete="email" required placeholder="What's your email address?">
-                                </div>
-                            </div>
-
-                            <div class="infoLine">
-                                <div class="infoInput">
-                                    <label for="fromName">Name :</label>
-                                    <input type="text" id="fromName" name="fromName" autocomplete="name" required placeholder="What's your name?">
-                                </div>
-                            </div>
-
-                            <div class="infoLine">
-                                <div class="infoInput">
-                                    <label for="fromSubject">Subject :</label>
-                                    <input type="text" id="fromSubject" name="fromSubject" required
-                                        placeholder="What is it you want to talk about?">
-                                </div>
-                            </div>
-
-                        </div>
-
-                        <div class="visually-hidden" aria-hidden="true">
-                            <label for="website">Leave this field empty</label>
-                            <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
-                        </div>
-                        <label for="mainMessage" class="visually-hidden">Message</label>
-                        <textarea id="mainMessage" required name="mainMessage" placeholder="Type your message here..."></textarea>
-
-                    </form>
-
                 </div>
-
-
-
             </div>
-            </div>
+            <footer class="siteFooter">
+                <p>&copy; 2026 ABOC. All rights reserved.</p>
+            </footer>
         </section>
     </main>
 
@@ -518,7 +479,6 @@
 
     <script src="https://unpkg.com/splitting@1.0.6/dist/splitting.min.js"
         integrity="sha384-taxnKSnzdVS5gZB4jZcieFZlmBPQMFqhdEmCScZsrIFCxX8Zizq4fKJJH5kBwMXT" crossorigin="anonymous"></script>
-    <script src="js/toastr.js"></script>
     <script src="js/sendEmail.js"></script>
 
 </body>
