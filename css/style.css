@@ -4268,16 +4268,12 @@ body {
     width: 100%;
 }
 
-/* sekcije koje na desktopu zauzimaju tacno jedan ekran */
-@media (min-width: 768px) {
-
-    #fullPage .s1,
-    #fullPage .s3,
-    #fullPage .s5 {
-        height: 100vh;
-        height: 100dvh;
-    }
+/* hero uvijek zauzima tacno jedan ekran */
+#fullPage .s1 {
+    height: 100vh;
+    height: 100dvh;
 }
+
 
 #section-nav {
     position: fixed;
@@ -4349,5 +4345,268 @@ body {
 @media (prefers-reduced-motion: reduce) {
     #fullPage {
         scroll-behavior: auto;
+    }
+}
+
+
+/* ---------- Responsive ---------- */
+
+/* kontakt */
+#fullPage .s5 .contact {
+    max-width: none;
+    margin: 0;
+    padding: 16px 16px 0;
+}
+
+.socialMedia {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 0 28px;
+    top: auto;
+}
+
+.socialItem {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.socialMedia h4 {
+    position: static;
+    top: auto;
+    margin: 0;
+    font-size: clamp(14px, 2.2vw, 20px) !important;
+}
+
+.socialMediaBtn {
+    flex: none;
+    margin: 10px 0;
+}
+
+.sendEmailContainer {
+    height: auto;
+    margin-top: 0;
+    padding: 0 16px 16px;
+    overflow: hidden;
+    position: relative;
+}
+
+.emailBody {
+    min-width: 0;
+}
+
+.emailBody .emailInfo .infoLine .infoInput,
+.emailBody .emailInfo .infoLine .infoInput input {
+    min-width: 0;
+}
+
+.emailBody .emailInfo .infoLine .infoInput input.active {
+    width: auto;
+    flex: 1;
+    max-width: 174px;
+}
+
+.emailBody #mainMessage {
+    height: clamp(120px, 28vh, 300px);
+    height: clamp(120px, 28dvh, 300px);
+}
+
+.envelope,
+.envbg {
+    min-width: 0;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 900 / 460;
+}
+
+/* navigacija sekcija na malim ekranima: kompaktna traka na dnu */
+@media (max-width: 767px) {
+    #section-nav {
+        top: auto;
+        right: auto;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 2px 8px;
+        border-radius: 20px;
+        background: rgba(0, 0, 0, 0.45);
+        -webkit-backdrop-filter: blur(6px);
+        backdrop-filter: blur(6px);
+    }
+
+    #section-nav ul {
+        display: flex;
+    }
+
+    #section-nav a {
+        width: 40px;
+        height: 40px;
+        margin-top: 0;
+    }
+
+    /* mjesto za traku navigacije na dnu */
+    #fullPage .s2,
+    #fullPage .s3,
+    #fullPage .s4,
+    #fullPage .s5 {
+        padding-bottom: 64px;
+    }
+}
+
+/* hero ilustracija: skalira se sa velicinom ekrana */
+@media (max-width: 1199px) {
+    #fullPage .fs .hold-illustration {
+        left: 38%;
+        transform: translate(0px, -50%) rotateX(55deg) rotateY(-3deg) rotateZ(49deg) scale(0.85);
+    }
+}
+
+@media (max-width: 991px) {
+    #fullPage .fs .hold-illustration {
+        left: 22%;
+        width: 78%;
+        transform: translate(0px, -50%) rotateX(55deg) rotateY(-3deg) rotateZ(49deg) scale(0.7);
+    }
+}
+
+@media (max-width: 767px) {
+    #fullPage .fs .hold-illustration {
+        display: block;
+        position: absolute;
+        left: 10%;
+        top: 70%;
+        width: 80%;
+        transform: translate(0px, -50%) rotateX(55deg) rotateY(-3deg) rotateZ(49deg) scale(0.5);
+    }
+}
+
+@media (max-width: 767px) and (max-height: 640px), (max-width: 360px) {
+    #fullPage .fs .hold-illustration {
+        top: 76%;
+        transform: translate(0px, -50%) rotateX(55deg) rotateY(-3deg) rotateZ(49deg) scale(0.42);
+    }
+}
+
+/* niski ekrani (npr. telefon u landscape-u) */
+@media (max-height: 560px) and (min-width: 768px) {
+    #fullPage .fs .hold-illustration {
+        transform: translate(0px, -50%) rotateX(55deg) rotateY(-3deg) rotateZ(49deg) scale(0.55);
+    }
+}
+
+/* velike rezolucije: ilustracija malo veca */
+@media (min-width: 1600px) and (min-height: 900px) {
+    #fullPage .fs .hold-illustration {
+        transform: translate(0px, -50%) rotateX(55deg) rotateY(-3deg) rotateZ(49deg) scale(1.2);
+    }
+}
+
+/* tim: fotografije zadrzavaju omjer i skaliraju se sa ekranom */
+#teams img {
+    height: auto;
+}
+
+@media (min-width: 768px) {
+
+    #teams .topL,
+    #teams .topR,
+    #teams .bottomL,
+    #teams .bottomC,
+    #teams .bottomR {
+        width: auto;
+        height: clamp(120px, 20vh, 280px);
+        max-width: 100%;
+    }
+
+    #teams .centerImg {
+        width: auto;
+        height: clamp(160px, 32vh, 360px);
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 767px) {
+
+    #teams .topL,
+    #teams .topR,
+    #teams .bottomL,
+    #teams .bottomC,
+    #teams .bottomR {
+        width: min(65vw, 240px);
+        height: auto;
+    }
+
+    #teams .centerImg {
+        width: min(55vw, 200px);
+        height: auto;
+    }
+}
+
+/* telefon u landscape-u: naslov lijevo, ilustracija desno */
+@media (max-width: 767px) and (max-height: 500px) {
+    #fullPage .title {
+        margin-top: 8%;
+        margin-left: 5%;
+    }
+
+    #fullPage .title .text2 {
+        font-size: 11vh;
+    }
+
+    #fullPage .fs .hold-illustration {
+        left: 48%;
+        top: 58%;
+        width: 50%;
+        transform: translate(0px, -50%) rotateX(55deg) rotateY(-3deg) rotateZ(49deg) scale(0.5);
+    }
+}
+
+
+/* naslov sekcije Team */
+.sectionTitle {
+    margin: 0;
+    padding: 16px 16px 0;
+    color: #fff;
+    font-size: clamp(24px, 4vh, 40px);
+    text-align: center;
+    text-decoration: underline;
+}
+
+/* strelica na dnu hero sekcije */
+.scrollDown {
+    position: absolute;
+    bottom: 24px;
+    left: 50%;
+    z-index: 10001;
+    transform: translateX(-50%);
+    color: #fff;
+    font-size: 28px;
+    text-decoration: none;
+    animation: scrollDownBounce 1.8s ease-in-out infinite;
+}
+
+.scrollDown:hover,
+.scrollDown:focus-visible {
+    color: #4da3ff;
+}
+
+@keyframes scrollDownBounce {
+
+    0%,
+    100% {
+        transform: translate(-50%, 0);
+    }
+
+    50% {
+        transform: translate(-50%, 10px);
+    }
+}
+
+@media (max-width: 767px) {
+    .scrollDown {
+        bottom: 72px;
+        font-size: 24px;
     }
 }
