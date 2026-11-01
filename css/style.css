@@ -1297,3 +1297,144 @@ body {
         margin-top: 28px;
     }
 }
+
+/* ---------- Koverta (animacija slanja) ---------- */
+.contactCard {
+    position: relative;
+}
+
+.contactForm {
+    transition: opacity 0.45s ease, transform 0.45s ease;
+}
+
+.contactForm.is-folding {
+    opacity: 0;
+    transform: scale(0.55);
+    pointer-events: none;
+}
+
+.envelope {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 240px;
+    height: 160px;
+    margin: -80px 0 0 -120px;
+    perspective: 700px;
+    opacity: 0;
+    transform: scale(0.6);
+    transition: opacity 0.4s ease, transform 0.9s cubic-bezier(0.5, 0, 0.75, 0.2);
+}
+
+.envelope[hidden] {
+    display: none;
+}
+
+.envelope.is-in {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.envBack,
+.envFront {
+    position: absolute;
+    inset: 0;
+    border-radius: 10px;
+}
+
+.envBack {
+    background: #0b4f80;
+    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.4);
+}
+
+.envFront {
+    z-index: 3;
+    background: linear-gradient(135deg, #0873b8, #4353ff);
+    clip-path: polygon(0 0, 50% 58%, 100% 0, 100% 100%, 0 100%);
+}
+
+.envLetter {
+    position: absolute;
+    z-index: 2;
+    top: 8px;
+    right: 22px;
+    left: 22px;
+    height: 128px;
+    padding: 18px 16px;
+    border-radius: 6px;
+    background: #fff;
+    transform: translateY(-110px);
+    transition: transform 0.8s cubic-bezier(0.3, 0.7, 0.3, 1);
+}
+
+.envLetter span {
+    display: block;
+    height: 6px;
+    margin-bottom: 10px;
+    border-radius: 3px;
+    background: #c8d6e5;
+}
+
+.envLetter span:nth-child(2) {
+    width: 80%;
+}
+
+.envLetter span:nth-child(3) {
+    width: 60%;
+}
+
+.envLetter span:nth-child(4) {
+    width: 70%;
+}
+
+.envelope.is-letter .envLetter {
+    transform: translateY(14px);
+}
+
+.envFlap {
+    position: absolute;
+    z-index: 4;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 58%;
+    background: linear-gradient(180deg, #4353ff, #0873b8);
+    clip-path: polygon(0 0, 100% 0, 50% 100%);
+    transform: rotateX(180deg);
+    transform-origin: top center;
+    transition: transform 0.6s ease;
+}
+
+.envelope.is-closed .envFlap {
+    transform: rotateX(0deg);
+}
+
+.envelope.is-away {
+    opacity: 0;
+    transform: translate(140px, -120px) rotate(14deg) scale(0.5);
+    transition: opacity 0.7s ease 0.15s, transform 0.8s cubic-bezier(0.5, 0, 0.75, 0.2);
+}
+
+.formSuccess.is-entering {
+    animation: successIn 0.5s ease both;
+}
+
+@keyframes successIn {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .envelope,
+    .contactForm {
+        transition: none;
+    }
+}

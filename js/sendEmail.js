@@ -7,6 +7,9 @@
     var statusEl = document.getElementById('formStatus');
     var success = document.getElementById('formSuccess');
     var again = document.getElementById('sendAgain');
+    var scene = document.getElementById('envelopeScene');
+    var card = form.parentElement;
+    var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
     var rules = [
         { id: 'fromName', message: 'Please enter your name.' },
@@ -42,6 +45,35 @@
         form.setAttribute('aria-busy', busy ? 'true' : 'false');
     }
 
+    // forma se sklopi u kovertu, koverta se zatvori i odleti, pa se prikaze potvrda
+    function showSuccess() {
+        scene.hidden = true;
+        scene.className = 'envelope';
+        success.hidden = false;
+        success.classList.add('is-entering');
+        success.querySelector('h3').focus();
+    }
+
+    function playEnvelope() {
+        card.style.minHeight = card.offsetHeight + 'px';
+        if (reduceMotion) {
+            form.hidden = true;
+            showSuccess();
+            return;
+        }
+        form.classList.add('is-folding');
+        setTimeout(function () {
+            form.hidden = true;
+            scene.hidden = false;
+            void scene.offsetWidth;
+            scene.classList.add('is-in');
+        }, 450);
+        setTimeout(function () { scene.classList.add('is-letter'); }, 900);
+        setTimeout(function () { scene.classList.add('is-closed'); }, 1800);
+        setTimeout(function () { scene.classList.add('is-away'); }, 2400);
+        setTimeout(showSuccess, 3300);
+    }
+
     // greska nestaje cim korisnik krene ispravljati polje
     rules.forEach(function (rule) {
         document.getElementById(rule.id).addEventListener('input', function () {
@@ -73,9 +105,7 @@
             })
             .then(function (result) {
                 if (result.ok && result.text.indexOf('sent') > -1) {
-                    form.hidden = true;
-                    success.hidden = false;
-                    success.querySelector('h3').focus();
+                    playEnvelope();
                     return;
                 }
                 statusEl.classList.add('is-error');
@@ -95,7 +125,10 @@
     again.addEventListener('click', function () {
         form.reset();
         success.hidden = true;
+        success.classList.remove('is-entering');
+        form.classList.remove('is-folding');
         form.hidden = false;
+        card.style.minHeight = '';
         document.getElementById('fromName').focus();
     });
 })();
