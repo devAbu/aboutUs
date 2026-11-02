@@ -30,3 +30,12 @@ function resize() {
     black.resize(window.innerWidth, window.innerHeight);
     white.resize(window.innerWidth, window.innerHeight);
 }
+
+// gasi intro: zaustavlja ticker i oslobadja WebGL (poziva se iz js/src/shape.js kad intro zavrsi)
+window.introDestroy = function () {
+    window.removeEventListener('resize', resize);
+    window.introStage = null;
+    PIXI.ticker.shared.stop();
+    if (window.TweenMax) TweenMax.killAll(false, true, false);
+    app.destroy(true);
+};

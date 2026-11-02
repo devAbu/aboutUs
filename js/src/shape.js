@@ -246,6 +246,13 @@ $(document).ready(function () {
         if (introDone) return;
         introDone = true;
         timers.forEach(clearTimeout);
+        if (window.introDestroy) {
+            try {
+                window.introDestroy();
+            } catch (e) {
+                // intro je vec ugasen ili nije potpuno ucitan
+            }
+        }
         $('canvas').not('div.container > canvas').remove();
         $('.welcome').remove();
         $('#home').load('./views/home.html');
