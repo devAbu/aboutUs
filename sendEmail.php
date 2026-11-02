@@ -3,7 +3,7 @@
 // Kontakt forma: prima samo POST, validira unos i salje mail.
 // Odgovor 'sent' znaci uspjeh (JS provjerava taj tekst).
 
-$siteEmail = 'info@abocdev.com';              // adresa sa koje stize mail (From)
+$siteEmail = 'info@a-boc.com';              // adresa sa koje stize mail (From)
 $adminEmail = 'abdulrahman.almonajed@gmail.com'; // primalac poruka
 $throttleSeconds = 30;                        // minimalni razmak izmedju poruka sa iste IP adrese
 

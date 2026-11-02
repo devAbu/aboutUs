@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://abocdev.com/sitemap.xml
+Sitemap: https://a-boc.com/sitemap.xml
