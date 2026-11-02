@@ -280,11 +280,11 @@ body {
     border-radius: 4px;
 }
 
-#section-nav a.active i {
+#section-nav a.active .icon {
     transform: scale(1.25);
 }
 
-#section-nav i {
+#section-nav .icon {
     font-size: 16px;
     transition: transform 0.2s ease;
 }
@@ -1497,4 +1497,15 @@ body {
     .contactForm {
         transition: none;
     }
+}
+
+
+/* ---------- Ikone (SVG) ---------- */
+.icon {
+    display: inline-block;
+    width: auto;
+    height: 1em;
+    overflow: visible;
+    fill: currentColor;
+    vertical-align: -0.125em;
 }
